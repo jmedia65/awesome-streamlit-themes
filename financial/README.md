@@ -33,10 +33,13 @@ This theme exudes the authority and trustworthiness of top-tier financial instit
 ```bash
 # Clone the entire repo to see all themes
 git clone https://github.com/jmedia65/awesome-streamlit-themes.git
-cd awesome-streamlit-themes/financial
+cd awesome-streamlit-themes
 
-# Install dependencies and see the theme in action
+# Install dependencies
 pip install -r requirements.txt
+
+# Navigate to financial theme and see it in action
+cd financial
 streamlit run streamlit_app.py
 ```
 
@@ -116,8 +119,7 @@ Perfect for:
 ✅ **Executive Appeal** - Boardroom-ready aesthetics  
 ✅ **Data Focus** - Clean design that highlights insights  
 ✅ **Professional Polish** - Enterprise-grade visual quality  
-✅ **Risk Mitigation** - Conservative design reduces user resistance  
-✅ **Global Recognition** - Financial institutions worldwide use similar palettes
+✅ **Risk Mitigation** - Conservative design reduces user resistance
 
 ## 🎯 Pro Tips
 

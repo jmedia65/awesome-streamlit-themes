@@ -2,7 +2,7 @@
 
 **Your Python app just time-traveled to 1985 and it's LIVING FOR THIS VIBE!**
 
-When your data needs that retro-future aesthetic and your dashboards deserve to look like they belong in Blade Runner. This isn't just a theme - it's a portal to the neon-soaked future we were promised. Perfect for developers who want their analytics to feel like hacker terminals from the movies! ⚡🎮
+When your data needs that retro-future aesthetic and your dashboards deserve to look like they belong in Blade Runner. Perfect for developers who want their analytics to feel like hacker terminals from the movies! ⚡🎮
 
 ![Cyberpunk Theme](cyberpunk.png)
 
@@ -14,7 +14,7 @@ This theme captures the pure essence of 80s cyberpunk aesthetics that every deve
 **🖤 Deep Space Background** (#0a0a0f) - Dark purple-black like a synthwave album cover  
 **💙 Neon Cyan Text** (#00ffff) - That retro computer terminal green-blue magic  
 **🧡 Electric Orange Borders** (#ff6b00) - Because neon everything!  
-**🤖 Orbitron Typography** - Used in Tron, gives serious Blade Runner vibes  
+**🤖 Orbitron Typography** - Gives serious Blade Runner vibes  
 **⚡ Sharp Corners** - Angular, not rounded (very 80s aesthetic)
 
 ## 🎯 Perfect For
@@ -33,10 +33,13 @@ This theme captures the pure essence of 80s cyberpunk aesthetics that every deve
 ```bash
 # Clone the entire repo to see all themes
 git clone https://github.com/jmedia65/awesome-streamlit-themes.git
-cd awesome-streamlit-themes/cyberpunk
+cd awesome-streamlit-themes
 
-# Install dependencies and enter the matrix
+# Install dependencies
 pip install -r requirements.txt
+
+# Navigate to cyberpunk theme and see it in action
+cd cyberpunk
 streamlit run streamlit_app.py
 ```
 

@@ -33,10 +33,13 @@ This theme captures the visual DNA of today's most successful startups and SaaS 
 ```bash
 # Clone the entire repo to see all themes
 git clone https://github.com/jmedia65/awesome-streamlit-themes.git
-cd awesome-streamlit-themes/saas-startup
+cd awesome-streamlit-themes
 
-# Install dependencies and see the theme in action
+# Install dependencies
 pip install -r requirements.txt
+
+# Navigate to saas-startup theme and see it in action
+cd saas-startup
 streamlit run streamlit_app.py
 ```
 

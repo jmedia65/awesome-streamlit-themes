@@ -2,7 +2,7 @@
 
 **Professional publishing design for content-focused applications!**
 
-When your data tells a story and readability matters most, this theme delivers the editorial excellence of The New York Times meets The Guardian. Clean, authoritative, and built for content - perfect for journalism, research, and publishing platforms! ✍️✨
+When your data tells a story and readability matters most, this theme delivers the editorial excellence of The New York Times. Clean, authoritative, and built for content - perfect for journalism, research, and publishing platforms! ✍️✨
 
 ![Editorial Theme](editorial.png)
 
@@ -33,10 +33,13 @@ This theme captures the timeless professionalism and readability of the world's 
 ```bash
 # Clone the entire repo to see all themes
 git clone https://github.com/jmedia65/awesome-streamlit-themes.git
-cd awesome-streamlit-themes/editorial
+cd awesome-streamlit-themes
 
-# Install dependencies and see the theme in action
+# Install dependencies
 pip install -r requirements.txt
+
+# Navigate to editorial theme and see it in action
+cd editorial
 streamlit run streamlit_app.py
 ```
 
@@ -120,7 +123,6 @@ Perfect for:
 
 ## 💡 Why Editorial Design Works
 
-✅ **Instant Authority** - Editorial red commands attention and respect  
 ✅ **Maximum Readability** - Serif typography optimized for content consumption  
 ✅ **Professional Hierarchy** - Clear distinction between headlines and body text  
 ✅ **Timeless Appeal** - Classic newspaper aesthetic that never dates  
@@ -129,20 +131,10 @@ Perfect for:
 
 ## 🎯 Pro Tips
 
-- **Perfect for content-heavy dashboards** - excellent readability for long sessions
 - **Great for research presentations** - academic credibility with editorial polish
 - **Ideal for storytelling with data** - supports narrative-driven analysis
 - **Excellent for client reports** - professional publishing-grade appearance
-
-## 📺 Editorial Industry Approved
-
-This design approach is trusted by:
-
-- Major newspapers and news organizations
-- Academic journals and research institutions
-- Publishing houses and media companies
-- Content marketing agencies
-- Digital magazine platforms
+- **Perfect for content-heavy dashboards** - excellent readability for long sessions
 
 ---
 

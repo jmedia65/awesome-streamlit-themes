@@ -33,10 +33,13 @@ This theme captures the exact visual comfort of your favorite development enviro
 ```bash
 # Clone the entire repo to see all themes
 git clone https://github.com/jmedia65/awesome-streamlit-themes.git
-cd awesome-streamlit-themes/dark-mode
+cd awesome-streamlit-themes
 
-# Install dependencies and see the theme in action
+# Install dependencies
 pip install -r requirements.txt
+
+# Navigate to dark-mode theme and see it in action
+cd dark-mode
 streamlit run streamlit_app.py
 ```
 
@@ -100,7 +103,7 @@ borderColor = "#30363d"               # Dark gray borders
 
 ## 🏆 The Developer Recognition Factor
 
-Every developer will look at this and immediately think: "This looks like professional developer tooling." It has that instant credibility of GitHub, VS Code, and Linear combined!
+Every developer will look at this and immediately think: "This looks like professional developer tooling." It has that instant credibility of GitHub, VS Code, and Cursor combined!
 
 Your dev team will actually **WANT** to use internal tools that look this good! No more "ugh, another ugly internal dashboard" - this makes Streamlit apps feel like premium developer software.
 

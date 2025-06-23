@@ -33,10 +33,13 @@ This theme captures the clean, systematic beauty that made Tailwind CSS the most
 ```bash
 # Clone the entire repo to see all themes
 git clone https://github.com/jmedia65/awesome-streamlit-themes.git
-cd awesome-streamlit-themes/tailwind
+cd awesome-streamlit-themes
 
-# Install dependencies and see the theme in action
+# Install dependencies
 pip install -r requirements.txt
+
+# Navigate to tailwind theme and see it in action
+cd tailwind
 streamlit run streamlit_app.py
 ```
 

@@ -14,7 +14,7 @@ This theme embodies the professionalism and trustworthiness essential for health
 **🧼 Clinical White Background** - Clean, sterile, professional atmosphere  
 **📊 High Contrast Text** - Meets accessibility standards for medical software  
 **🔲 Minimal Rounding** - Sharp, precise edges like medical equipment  
-**⚕️ IBM Plex Typography** - Used by major healthcare institutions  
+**⚕️ IBM Plex Typography** - Enterprise font designed for business applications
 **🩹 Soft Borders** - Gentle definition without being harsh
 
 ## 🎯 Perfect For
@@ -33,10 +33,13 @@ This theme embodies the professionalism and trustworthiness essential for health
 ```bash
 # Clone the entire repo to see all themes
 git clone https://github.com/jmedia65/awesome-streamlit-themes.git
-cd awesome-streamlit-themes/healthcare
+cd awesome-streamlit-themes
 
-# Install dependencies and see the theme in action
+# Install dependencies
 pip install -r requirements.txt
+
+# Navigate to healthcare theme and see it in action
+cd healthcare
 streamlit run streamlit_app.py
 ```
 
@@ -52,13 +55,13 @@ cp -r static/ /path/to/your/project/
 
 _All fonts are already included in the `static/` folder - no downloads needed!_
 
-### IBM Plex Sans (Healthcare Industry Standard)
+### IBM Plex Sans
 
 - **Perfect for:** Enterprise healthcare systems and medical interfaces
 - **Used for:** Body text, headings, patient information displays
 - **Source:** [Google Fonts - IBM Plex Sans](https://fonts.google.com/specimen/IBM+Plex+Sans)
 
-### IBM Plex Mono (Clinical Precision)
+### IBM Plex Mono
 
 - **Perfect for:** Medical data, patient records, precise clinical information
 - **Used for:** Code snippets, data tables, medical ID numbers
@@ -99,23 +102,20 @@ borderColor = "#dee2e6"               # Soft gray borders - clean definition
 
 ## 🏆 The Medical-Grade Difference
 
-This theme creates the same visual confidence you get from premium medical software like Epic, Cerner, or specialized medical devices. It says "This is professional medical software you can trust with critical health data."
+This theme says "This is professional medical software you can trust with critical health data."
 
 Perfect for:
 
-- **Patient safety applications** - Clinical precision and clarity
 - **Medical research platforms** - Academic credibility and professionalism
 - **Healthcare compliance tools** - Meets medical software visual standards
 - **Clinical decision support** - Clean, distraction-free environment
 
 ## 💡 Why Healthcare Design Matters
 
-✅ **Patient Trust** - Medical blue builds immediate confidence  
 ✅ **Clinical Clarity** - High contrast supports accurate data reading  
 ✅ **Accessibility First** - Meets medical software accessibility standards  
 ✅ **Professional Credibility** - Visual language of trusted medical institutions  
-✅ **Stress Reduction** - Calming colors reduce patient and staff anxiety  
-✅ **Regulatory Compliance** - Conservative design supports healthcare regulations
+✅ **Patient Trust** - Medical blue builds immediate confidence
 
 ## 🎯 Pro Tips
 
@@ -124,17 +124,7 @@ Perfect for:
 - **Ideal for medical data visualization** - clean background highlights insights
 - **Excellent for telehealth platforms** - professional yet approachable
 
-## ⚕️ Healthcare Industry Trusted
-
-This design approach is used by:
-
-- Major hospital systems and medical centers
-- Electronic Health Record (EHR) providers
-- Medical device manufacturers
-- Pharmaceutical and biotech companies
-- Public health organizations
-
 ---
 
-**Built with ⚕️ for applications that save lives**  
+**Built with ⚕️ for healtcare applications**  
 _Where patient trust and clinical precision matter most_ 🏥

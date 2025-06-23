@@ -148,9 +148,11 @@ Adorable design for educational apps
 ## 🚀 Quick Start
 
 ```bash
-# Clone the entire repo to explore all themes
+# Clone the entire repo to see all themes
 git clone https://github.com/jmedia65/awesome-streamlit-themes.git
 cd awesome-streamlit-themes
+
+# Install dependencies
 pip install -r requirements.txt
 
 # Choose any theme and see it in action (example: healthcare)

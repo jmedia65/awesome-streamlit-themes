@@ -34,10 +34,13 @@ This theme applies actual early childhood development principles to create inter
 ```bash
 # Clone the entire repo to see all themes
 git clone https://github.com/jmedia65/awesome-streamlit-themes.git
-cd awesome-streamlit-themes/toddler
+cd awesome-streamlit-themes
 
-# Install dependencies and enter the magical world of early learning
+# Install dependencies
 pip install -r requirements.txt
+
+# Navigate to toddler theme and see it in action
+cd toddler
 streamlit run streamlit_app.py
 ```
 

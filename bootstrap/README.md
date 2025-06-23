@@ -33,10 +33,13 @@ Bootstrap is the most popular CSS framework for a reason - and now your Streamli
 ```bash
 # Clone the entire repo to see all themes
 git clone https://github.com/jmedia65/awesome-streamlit-themes.git
-cd awesome-streamlit-themes/bootstrap
+cd awesome-streamlit-themes
 
-# Install dependencies and see the theme in action
+# Install dependencies
 pip install -r requirements.txt
+
+# Navigate to bootstrap theme and see it in action
+cd bootstrap
 streamlit run streamlit_app.py
 ```
 
@@ -111,8 +114,7 @@ This theme bridges the gap between "obviously Streamlit" and "looks like a real 
 ✅ **Professional Polish** - Systematic design that feels intentional  
 ✅ **Developer Comfort** - Every web developer has used Bootstrap  
 ✅ **Enterprise Ready** - Safe choice for business applications  
-✅ **Responsive Feel** - Looks great on any screen size  
-✅ **Timeless Design** - Won't look outdated next year
+✅ **Responsive Feel** - Looks great on any screen size
 
 ## 🎯 Pro Tips
 

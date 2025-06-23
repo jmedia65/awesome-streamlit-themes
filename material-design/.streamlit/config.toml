@@ -41,7 +41,7 @@ weight = 700
 
 [theme]
 # 📱 MATERIAL DESIGN PALETTE 📱
-primaryColor = "#1976d2"             # Material Blue-700 - Google's signature
+primaryColor = "#1976d2"             # Material Blue-700 - Pure Material Designs
 backgroundColor = "#ffffff"          # Pure white - Material foundation
 secondaryBackgroundColor = "#f5f5f5" # Material Grey-100 - elevation surfaces
 textColor = "#212121"                # Material Grey-900 - high contrast
