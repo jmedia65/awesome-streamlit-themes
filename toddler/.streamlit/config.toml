@@ -1,0 +1,49 @@
+[server]
+enableStaticServing = true
+
+# Comic Neue - playful, friendly, easy to read for little eyes
+[[theme.fontFaces]]
+family = "ComicNeue"
+url = "app/static/ComicNeue-Regular.ttf"
+style = "normal"
+weight = 400
+
+[[theme.fontFaces]]
+family = "ComicNeue"
+url = "app/static/ComicNeue-Bold.ttf"
+style = "normal"
+weight = 700
+
+# Fredoka - super fun display font for headings
+[[theme.fontFaces]]
+family = "Fredoka"
+url = "app/static/Fredoka-Regular.ttf"
+style = "normal"
+weight = 400
+
+# Source Code Pro for any code (though unlikely in toddler apps!)
+[[theme.fontFaces]]
+family = "SourceCodePro"
+url = "app/static/SourceCodePro-Regular.ttf"
+style = "normal"
+weight = 400
+
+[theme]
+# 🌈 TODDLER RAINBOW PALETTE 🌈
+primaryColor = "#ff6b6b"             # Warm coral red - friendly, not scary
+backgroundColor = "#fff9e6"          # Soft cream yellow - warm, cozy like sunshine
+secondaryBackgroundColor = "#f0f8ff" # Alice blue - soft, cloud-like
+textColor = "#2d3436"                # Soft dark gray - easy on little eyes
+linkColor = "#fd79a8"                # Playful pink - fun but readable
+borderColor = "#74b9ff"              # Sky blue borders - cheerful and bright
+showWidgetBorder = true
+baseRadius = "1rem"                  # Extra rounded - soft, safe, huggable
+font = "ComicNeue"                   # Comic Neue - child-friendly, clear
+headingFont = "Fredoka"              # Fredoka - fun, bouncy display font
+codeFont = "SourceCodePro"           # Just in case!
+codeBackgroundColor = "#e8f4fd"      # Light blue code background
+showSidebarBorder = true
+
+[theme.sidebar]
+backgroundColor = "#e8f4fd"          # Soft blue - like a cozy nursery
+secondaryBackgroundColor = "#fff0f5" # Lavender blush - gentle and sweet

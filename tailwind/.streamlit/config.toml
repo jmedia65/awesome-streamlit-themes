@@ -1,0 +1,60 @@
+[server]
+enableStaticServing = true
+
+# Inter font family - the quintessential modern web font
+[[theme.fontFaces]]
+family = "Inter"
+url = "app/static/Inter_18pt-Regular.ttf"
+style = "normal"
+weight = 400
+
+[[theme.fontFaces]]
+family = "Inter"
+url = "app/static/Inter_18pt-Medium.ttf"
+style = "normal"
+weight = 500
+
+[[theme.fontFaces]]
+family = "Inter"
+url = "app/static/Inter_18pt-SemiBold.ttf"
+style = "normal"
+weight = 600
+
+[[theme.fontFaces]]
+family = "Inter"
+url = "app/static/Inter_18pt-Bold.ttf"
+style = "normal"
+weight = 700
+
+# JetBrains Mono for code - clean, modern monospace
+[[theme.fontFaces]]
+family = "JetBrainsMono"
+url = "app/static/JetBrainsMono-Regular.ttf"
+style = "normal"
+weight = 400
+
+[[theme.fontFaces]]
+family = "JetBrainsMono"
+url = "app/static/JetBrainsMono-Medium.ttf"
+style = "normal"
+weight = 500
+
+[theme]
+# Tailwind-inspired color palette
+primaryColor = "#3b82f6"           # Tailwind blue-500 - clean, modern primary
+backgroundColor = "#ffffff"        # Pure white background
+secondaryBackgroundColor = "#f8fafc" # Tailwind slate-50 - subtle gray
+textColor = "#0f172a"             # Tailwind slate-900 - dark, readable
+linkColor = "#2563eb"             # Tailwind blue-600 - slightly darker blue for links
+borderColor = "#e2e8f0"           # Tailwind slate-200 - light, clean borders
+showWidgetBorder = true
+baseRadius = "0.5rem"             # Tailwind's default border radius
+font = "Inter"                    # Inter for body text - modern, clean
+headingFont = "Inter"             # Inter for headings too - consistent
+codeFont = "JetBrainsMono"        # JetBrains Mono for code
+codeBackgroundColor = "#f1f5f9"   # Tailwind slate-100 - light code background
+showSidebarBorder = true
+
+[theme.sidebar]
+backgroundColor = "#f8fafc"        # Tailwind slate-50 - subtle sidebar
+secondaryBackgroundColor = "#f1f5f9" # Tailwind slate-100 - slightly darker sections

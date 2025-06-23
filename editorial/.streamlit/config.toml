@@ -1,0 +1,73 @@
+[server]
+enableStaticServing = true
+
+# Lora - classic editorial serif for readability
+[[theme.fontFaces]]
+family = "Lora"
+url = "app/static/Lora-Regular.ttf"
+style = "normal"
+weight = 400
+
+[[theme.fontFaces]]
+family = "Lora"
+url = "app/static/Lora-Medium.ttf"
+style = "normal"
+weight = 500
+
+[[theme.fontFaces]]
+family = "Lora"
+url = "app/static/Lora-SemiBold.ttf"
+style = "normal"
+weight = 600
+
+[[theme.fontFaces]]
+family = "Lora"
+url = "app/static/Lora-Bold.ttf"
+style = "normal"
+weight = 700
+
+# Playfair Display for headings - elegant editorial serif
+[[theme.fontFaces]]
+family = "PlayfairDisplay"
+url = "app/static/PlayfairDisplay-Regular.ttf"
+style = "normal"
+weight = 400
+
+[[theme.fontFaces]]
+family = "PlayfairDisplay"
+url = "app/static/PlayfairDisplay-SemiBold.ttf"
+style = "normal"
+weight = 600
+
+[[theme.fontFaces]]
+family = "PlayfairDisplay"
+url = "app/static/PlayfairDisplay-Bold.ttf"
+style = "normal"
+weight = 700
+
+# Source Code Pro for code - clean, editorial-grade monospace
+[[theme.fontFaces]]
+family = "SourceCodePro"
+url = "app/static/SourceCodePro-Regular.ttf"
+style = "normal"
+weight = 400
+
+[theme]
+# 📰 CLASSIC EDITORIAL PALETTE 📰
+primaryColor = "#c41e3a"             # Editorial red - breaking news, attention
+backgroundColor = "#ffffff"          # Pure white - classic newspaper background
+secondaryBackgroundColor = "#f9f9f9" # Off-white - subtle article sections
+textColor = "#1a1a1a"                # Near-black - maximum readability
+linkColor = "#0066cc"                # Editorial blue - trustworthy links
+borderColor = "#e0e0e0"              # Light gray - clean article separation
+showWidgetBorder = true
+baseRadius = "0.125rem"              # Minimal rounding - classic, timeless
+font = "Lora"                        # Lora serif - editorial readability
+headingFont = "PlayfairDisplay"      # Playfair Display - elegant editorial headlines
+codeFont = "SourceCodePro"           # Source Code Pro - clean monospace
+codeBackgroundColor = "#f5f5f5"      # Light gray - subtle code highlighting
+showSidebarBorder = true
+
+[theme.sidebar]
+backgroundColor = "#f7f7f7"          # Light gray - editorial sidebar
+secondaryBackgroundColor = "#eeeeee" # Slightly darker for sections

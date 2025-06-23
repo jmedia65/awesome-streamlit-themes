@@ -1,0 +1,60 @@
+[server]
+enableStaticServing = true
+
+# Inter font family - trusted by financial institutions worldwide
+[[theme.fontFaces]]
+family = "Inter"
+url = "app/static/Inter_18pt-Regular.ttf"
+style = "normal"
+weight = 400
+
+[[theme.fontFaces]]
+family = "Inter"
+url = "app/static/Inter_18pt-Medium.ttf"
+style = "normal"
+weight = 500
+
+[[theme.fontFaces]]
+family = "Inter"
+url = "app/static/Inter_18pt-SemiBold.ttf"
+style = "normal"
+weight = 600
+
+[[theme.fontFaces]]
+family = "Inter"
+url = "app/static/Inter_18pt-Bold.ttf"
+style = "normal"
+weight = 700
+
+# Source Code Pro for code - professional, banking-grade monospace
+[[theme.fontFaces]]
+family = "SourceCodePro"
+url = "app/static/SourceCodePro-Regular.ttf"
+style = "normal"
+weight = 400
+
+[[theme.fontFaces]]
+family = "SourceCodePro"
+url = "app/static/SourceCodePro-SemiBold.ttf"
+style = "normal"
+weight = 600
+
+[theme]
+# Professional color palette - inspired by top-tier financial institutions
+primaryColor = "#1e3a8a"             # Deep navy blue - trust, stability, authority
+backgroundColor = "#fefefe"          # Off-white - softer than pure white, easier on eyes
+secondaryBackgroundColor = "#f8fafc" # Very light gray - subtle distinction
+textColor = "#1f2937"                # Charcoal gray - professional, highly readable
+linkColor = "#1e40af"                # Slightly lighter navy for links
+borderColor = "#d1d5db"              # Medium gray borders - clear definition
+showWidgetBorder = true
+baseRadius = "0.375rem"              # Subtle rounding - professional but not sharp
+font = "Inter"                       # Inter - used by Goldman Sachs, GitHub, Figma
+headingFont = "Inter"                # Consistent typography hierarchy
+codeFont = "SourceCodePro"           # Source Code Pro - clean, professional
+codeBackgroundColor = "#f3f4f6"      # Light gray code background
+showSidebarBorder = true
+
+[theme.sidebar]
+backgroundColor = "#f1f5f9"          # Light blue-gray - sophisticated sidebar
+secondaryBackgroundColor = "#e5e7eb" # Slightly darker for content sections

@@ -1,0 +1,60 @@
+[server]
+enableStaticServing = true
+
+# IBM Plex Sans - trusted by healthcare institutions worldwide
+[[theme.fontFaces]]
+family = "IBMPlexSans"
+url = "app/static/IBMPlexSans-Regular.ttf"
+style = "normal"
+weight = 400
+
+[[theme.fontFaces]]
+family = "IBMPlexSans"
+url = "app/static/IBMPlexSans-Medium.ttf"
+style = "normal"
+weight = 500
+
+[[theme.fontFaces]]
+family = "IBMPlexSans"
+url = "app/static/IBMPlexSans-SemiBold.ttf"
+style = "normal"
+weight = 600
+
+[[theme.fontFaces]]
+family = "IBMPlexSans"
+url = "app/static/IBMPlexSans-Bold.ttf"
+style = "normal"
+weight = 700
+
+# IBM Plex Mono for code - clinical precision
+[[theme.fontFaces]]
+family = "IBMPlexMono"
+url = "app/static/IBMPlexMono-Regular.ttf"
+style = "normal"
+weight = 400
+
+[[theme.fontFaces]]
+family = "IBMPlexMono"
+url = "app/static/IBMPlexMono-SemiBold.ttf"
+style = "normal"
+weight = 600
+
+[theme]
+# 🏥 CLINICAL MEDICAL PALETTE 🏥
+primaryColor = "#0066cc"             # Medical blue - trust, reliability, clinical
+backgroundColor = "#fafbfc"          # Off-white - clinical clean but not harsh
+secondaryBackgroundColor = "#f4f6f8" # Light gray-blue - subtle medical feel
+textColor = "#2c3e50"                # Dark blue-gray - highly readable, professional
+linkColor = "#0052a3"                # Darker medical blue for links
+borderColor = "#dee2e6"              # Soft gray borders - clean definition
+showWidgetBorder = true
+baseRadius = "0.25rem"               # Minimal rounding - clinical precision
+font = "IBMPlexSans"                 # IBM Plex - used by healthcare systems
+headingFont = "IBMPlexSans"          # Consistent typography hierarchy
+codeFont = "IBMPlexMono"             # Monospace for clinical precision
+codeBackgroundColor = "#f1f3f4"      # Very light gray for code
+showSidebarBorder = true
+
+[theme.sidebar]
+backgroundColor = "#f1f4f7"          # Soft blue-gray - calming sidebar
+secondaryBackgroundColor = "#e8ecf1" # Slightly darker for sections

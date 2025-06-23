@@ -1,0 +1,60 @@
+[server]
+enableStaticServing = true
+
+# Inter font family - the modern Bootstrap choice for web apps
+[[theme.fontFaces]]
+family = "Inter"
+url = "app/static/Inter_18pt-Regular.ttf"
+style = "normal"
+weight = 400
+
+[[theme.fontFaces]]
+family = "Inter"
+url = "app/static/Inter_18pt-Medium.ttf"
+style = "normal"
+weight = 500
+
+[[theme.fontFaces]]
+family = "Inter"
+url = "app/static/Inter_18pt-SemiBold.ttf"
+style = "normal"
+weight = 600
+
+[[theme.fontFaces]]
+family = "Inter"
+url = "app/static/Inter_18pt-Bold.ttf"
+style = "normal"
+weight = 700
+
+# JetBrains Mono for code - clean, developer-friendly
+[[theme.fontFaces]]
+family = "JetBrainsMono"
+url = "app/static/JetBrainsMono-Regular.ttf"
+style = "normal"
+weight = 400
+
+[[theme.fontFaces]]
+family = "JetBrainsMono"
+url = "app/static/JetBrainsMono-Medium.ttf"
+style = "normal"
+weight = 500
+
+[theme]
+# 💙 CLASSIC BOOTSTRAP PALETTE 💙
+primaryColor = "#0d6efd"              # Bootstrap 5's signature blue - instantly recognizable
+backgroundColor = "#ffffff"           # Pure white - Bootstrap's clean foundation
+secondaryBackgroundColor = "#f8f9fa"  # Bootstrap's gray-50 - subtle card backgrounds
+textColor = "#212529"                 # Bootstrap's body text color - perfect contrast
+linkColor = "#0d6efd"                 # Bootstrap primary for links - consistent branding
+borderColor = "#dee2e6"               # Bootstrap's border-color - clean separation
+showWidgetBorder = true
+baseRadius = "0.375rem"               # Bootstrap's default border-radius - familiar feel
+font = "Inter"                        # Inter - modern Bootstrap's choice for web
+headingFont = "Inter"                 # Consistent typography - Bootstrap style
+codeFont = "JetBrainsMono"            # Clean monospace for code blocks
+codeBackgroundColor = "#f8f9fa"       # Light gray code background - Bootstrap style
+showSidebarBorder = true
+
+[theme.sidebar]
+backgroundColor = "#f8f9fa"           # Bootstrap gray-50 - clean sidebar
+secondaryBackgroundColor = "#e9ecef"  # Bootstrap gray-200 - subtle sections

@@ -1,0 +1,60 @@
+[server]
+enableStaticServing = true
+
+# DM Sans - the startup world's favorite font
+[[theme.fontFaces]]
+family = "DMSans"
+url = "app/static/DMSans-Regular.ttf"
+style = "normal"
+weight = 400
+
+[[theme.fontFaces]]
+family = "DMSans"
+url = "app/static/DMSans-Medium.ttf"
+style = "normal"
+weight = 500
+
+[[theme.fontFaces]]
+family = "DMSans"
+url = "app/static/DMSans-SemiBold.ttf"
+style = "normal"
+weight = 600
+
+[[theme.fontFaces]]
+family = "DMSans"
+url = "app/static/DMSans-Bold.ttf"
+style = "normal"
+weight = 700
+
+# Fira Code for code - developer-loved monospace
+[[theme.fontFaces]]
+family = "FiraCode"
+url = "app/static/FiraCode-Regular.ttf"
+style = "normal"
+weight = 400
+
+[[theme.fontFaces]]
+family = "FiraCode"
+url = "app/static/FiraCode-Medium.ttf"
+style = "normal"
+weight = 500
+
+[theme]
+# 🚀 MODERN STARTUP PALETTE 🚀
+primaryColor = "#8b5cf6"             # Purple-500 - modern, trendy, growth-focused
+backgroundColor = "#ffffff"          # Pure white - clean, modern foundation
+secondaryBackgroundColor = "#fafafa" # Neutral-50 - subtle modern gray
+textColor = "#18181b"                # Zinc-900 - high contrast, modern
+linkColor = "#7c3aed"                # Purple-600 - slightly darker for links
+borderColor = "#e4e4e7"              # Zinc-200 - clean, modern borders
+showWidgetBorder = true
+baseRadius = "0.75rem"               # Generous rounding - modern, friendly
+font = "DMSans"                      # DM Sans - startup favorite
+headingFont = "DMSans"               # Consistent hierarchy
+codeFont = "FiraCode"                # Fira Code - developer-loved
+codeBackgroundColor = "#f4f4f5"      # Zinc-100 - subtle code background
+showSidebarBorder = true
+
+[theme.sidebar]
+backgroundColor = "#fafafa"          # Neutral-50 - clean sidebar
+secondaryBackgroundColor = "#f4f4f5" # Zinc-100 - subtle sections
