@@ -6,9 +6,9 @@ No more cookie-cutter dashboards. No more identical-looking apps. Just beautiful
 
 ## 🙏 Built on Streamlit's Amazing Foundation
 
-This project was inspired by [Thiago Teixeira](https://twitter.com/ThiagoTDotCom) (Streamlit co-founder) announcing Streamlit's new theming capabilities! 🚀
+This project was inspired by [Thiago Teixeira](https://twitter.com/ThiagoTDotCom) (Streamlit co-founder) announcing [Streamlit's new theming capabilities](https://x.com/ThiagoTDotCom/status/1934679204320432283)! 🚀
 
-The demo applications showcase the same UI elements from [Streamlit's official Anthropic-inspired example](https://github.com/streamlit/docs/tree/main/python/concept-source/theming-overview-anthropic-light-inspried) - this lets you see exactly how different themes transform the SAME interface. It's all about the visual transformation power of theming!
+The demo applications in this repo showcase the same UI elements from [Streamlit's official Anthropic-inspired example](https://github.com/streamlit/docs/tree/main/python/concept-source/theming-overview-anthropic-light-inspried) - this lets you see exactly how different themes transform the SAME interface. It's all about the visual transformation power of theming!
 
 **What we've added:** 10 professional theme configurations that make Streamlit apps look incredible.  
 **What Streamlit built:** The amazing theming system and demo interfaces that make this all possible.
@@ -22,7 +22,7 @@ Perfect for medical dashboards and clinical applications
 - Accessibility-focused
 - Medical-grade professionalism
 
-[📋 View Theme →](healthcare/) | [🚀 Demo](healthcare/demo_app.py)
+[📋 View Theme →](healthcare/)
 
 ---
 
@@ -35,7 +35,7 @@ Familiar styling every developer recognizes and loves
 - Developer-friendly
 - Instantly recognizable
 
-[📋 View Theme →](bootstrap/) | [🚀 Demo](bootstrap/demo_app.py)
+[📋 View Theme →](bootstrap/)
 
 ---
 
@@ -48,7 +48,7 @@ For late-night coding sessions and developer tools
 - Eye-friendly design
 - VS Code vibes
 
-[📋 View Theme →](dark-mode/) | [🚀 Demo](dark-mode/demo_app.py)
+[📋 View Theme →](dark-mode/)
 
 ---
 
@@ -61,7 +61,7 @@ Google's systematic design language
 - Clean, familiar interface
 - Android-inspired
 
-[📋 View Theme →](material-design/) | [🚀 Demo](material-design/demo_app.py)
+[📋 View Theme →](material-design/)
 
 ---
 
@@ -74,7 +74,7 @@ Modern, growth-focused design for internal tools
 - Startup energy
 - Unicorn vibes
 
-[📋 View Theme →](saas-startup/) | [🚀 Demo](saas-startup/demo_app.py)
+[📋 View Theme →](saas-startup/)
 
 ---
 
@@ -87,7 +87,7 @@ Professional content-focused design
 - High readability
 - Publishing-grade
 
-[📋 View Theme →](editorial/) | [🚀 Demo](editorial/demo_app.py)
+[📋 View Theme →](editorial/)
 
 ---
 
@@ -100,7 +100,7 @@ Modern web standards everyone loves
 - Familiar patterns
 - Web developer comfort
 
-[📋 View Theme →](tailwind/) | [🚀 Demo](tailwind/demo_app.py)
+[📋 View Theme →](tailwind/)
 
 ---
 
@@ -113,7 +113,7 @@ Corporate-grade design for serious business
 - Enterprise credibility
 - Boardroom-ready
 
-[📋 View Theme →](financial/) | [🚀 Demo](financial/demo_app.py)
+[📋 View Theme →](financial/)
 
 ---
 
@@ -126,7 +126,7 @@ Retro-future synthwave aesthetics
 - 80s vibes
 - Pure awesome
 
-[📋 View Theme →](cyberpunk/) | [🚀 Demo](cyberpunk/demo_app.py)
+[📋 View Theme →](cyberpunk/)
 
 ---
 
@@ -139,21 +139,32 @@ Adorable design for educational apps
 - Child-safe design
 - Maximum cuteness
 
-[📋 View Theme →](toddler/) | [🚀 Demo](toddler/demo_app.py)
+[📋 View Theme →](toddler/)
 
 ---
 
 ## 🚀 Quick Start
 
-1. **Choose a theme** from the list above
-2. **Navigate to the theme folder** (e.g., `healthcare/`)
-3. **Copy the files** to your Streamlit project:
-   ```bash
-   cp -r healthcare/.streamlit .
-   cp -r healthcare/static .
-   ```
-4. **Download fonts** (instructions in each theme's README)
-5. **Restart Streamlit** and enjoy your beautiful new theme!
+```bash
+# Clone the entire repo to explore all themes
+git clone https://github.com/jmedia65/awesome-streamlit-themes.git
+cd awesome-streamlit-themes
+pip install -r requirements.txt
+
+# Choose any theme and see it in action (example: healthcare)
+cd healthcare
+streamlit run streamlit_app.py
+```
+
+**Love what you see?** Copy the theme to your project:
+
+```bash
+# Copy theme files to your Streamlit project
+cp -r .streamlit/ /path/to/your/project/
+cp -r static/ /path/to/your/project/
+```
+
+**That's it!** All fonts are included, no downloads needed. Just restart your Streamlit app and enjoy your beautiful new theme! ✨
 
 ## 💡 How It Works
 
@@ -175,7 +186,7 @@ The Python demo applications are adapted from [Streamlit's official documentatio
 
 ### Google Fonts
 
-All fonts used in these themes are from [Google Fonts](https://fonts.google.com/) and are licensed under the [SIL Open Font License (OFL)](https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL). Individual font license files are included in each theme's static folder.
+All fonts used in these themes are from [Google Fonts](https://fonts.google.com/) and are licensed under the [SIL Open Font License (OFL)](https://openfontlicense.org/). Individual font license files are included in each theme's static folder.
 
 ### Theme Configurations
 
