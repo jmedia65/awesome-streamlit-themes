@@ -20,9 +20,9 @@ The demo applications in this repo showcase the same UI elements from [Streamlit
 Perfect for medical dashboards and clinical applications
 
 - Clinical blue design
-- IBM Plex Sans typography
-- Accessibility-focused
 - Medical-grade professionalism
+- Accessibility-focused
+- IBM Plex Sans typography
 
 [📋 View Theme →](healthcare/)
 
@@ -45,7 +45,7 @@ Familiar styling every developer recognizes and loves
 
 For late-night coding sessions and developer tools
 
-- GitHub Dark colors
+- GitHub-like Dark colors
 - JetBrains Mono code font
 - Eye-friendly design
 - VS Code vibes

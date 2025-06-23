@@ -5,7 +5,6 @@
 Instantly recognizable, beautifully systematic, and universally trusted. This theme brings Google's Material Design principles to your Streamlit apps, making them feel like applications built with Google's design system! 🎨✨
 
 ![Material Design Theme](material-design.png)
-_Recommended screenshot size: 1200x800px_
 
 ## 🔥 What Makes This Theme Special
 

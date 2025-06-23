@@ -48,10 +48,10 @@ weight = 700
 [theme]
 # 🌙 DARK MODE DEVELOPER PALETTE 🌙
 primaryColor = "#a855f7"             # Purple-500 - vibrant, code-like accent
-backgroundColor = "#0d1117"          # GitHub dark background - developer comfort
+backgroundColor = "#0d1117"          # GitHub-like dark background - developer comfort
 secondaryBackgroundColor = "#161b22" # Slightly lighter - cards and sections
 textColor = "#f0f6fc"                # Light blue-white - easy on eyes
-linkColor = "#58a6ff"                # GitHub blue - familiar developer color
+linkColor = "#58a6ff"                # GitHub-like blue - familiar developer color
 borderColor = "#30363d"              # Dark gray borders - subtle definition
 showWidgetBorder = true
 baseRadius = "0.375rem"              # Moderate rounding - modern feel

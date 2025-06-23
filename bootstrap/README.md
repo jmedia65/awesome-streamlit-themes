@@ -1,21 +1,21 @@
 # 💙 Bootstrap-Inspired Theme
 
-**The web framework every developer knows and loves - now for Streamlit!**
+**The popular web framework that millions of developers know - now for Streamlit!**
 
-Instantly familiar, professionally trusted, and universally recognized. This theme brings Bootstrap's signature aesthetic to your Streamlit apps, making them feel like real web applications! 🌐✨
+Instantly familiar, professionally trusted, and widely recognized. This theme brings Bootstrap's signature aesthetic to your Streamlit apps, making them feel like real web applications! 🌐✨
 
 ![Bootstrap Theme](bootstrap.png)
 
 ## 🔥 What Makes This Theme Special
 
-Bootstrap is the most popular CSS framework for a reason - and now your Streamlit apps can capture that same trusted aesthetic:
+Bootstrap is one of the most widely used CSS frameworks - and now your Streamlit apps can capture that same trusted aesthetic:
 
-**🔵 Signature Bootstrap Blue** (#0d6efd) - THE color every developer recognizes  
+**🔵 Bootstrap's Primary Blue** (#0d6efd) - Familiar to many web developers  
 **📱 System-Like Feel** - Clean, familiar, professional web app aesthetic  
-**⚙️ Perfect Border Radius** (0.375rem) - Bootstrap's exact default  
-**📊 Classic Gray Scale** - Bootstrap's signature gray palette (#f8f9fa, #e9ecef)  
-**🎯 Familiar Typography** - Inter font for that modern web feel  
-**🧩 Component-Ready** - Looks like it's built with Bootstrap components
+**⚙️ Bootstrap Border Radius** (0.375rem) - Bootstrap's default border-radius value  
+**📊 Bootstrap Gray Scale** - Bootstrap's defined gray palette (#f8f9fa, #e9ecef)  
+**🎯 Modern Typography** - Inter font for clean web application feel  
+**🧩 Component-Ready** - Designed to feel like Bootstrap-built interfaces
 
 ## 🎯 Perfect For
 
@@ -24,8 +24,8 @@ Bootstrap is the most popular CSS framework for a reason - and now your Streamli
 - **Data analysis platforms** that need credibility
 - **Customer support tools** and CRM systems
 - **Developer tools** and monitoring dashboards
-- **Any app that needs** to feel "professionally familiar"
-- **Enterprise applications** that require instant trust
+- **Applications needing** familiar web design patterns
+- **Enterprise applications** that require professional appearance
 - **Educational platforms** and learning management systems
 
 ## 🚀 Quick Start
@@ -55,15 +55,15 @@ cp -r static/ /path/to/your/project/
 
 _All fonts are already included in the `static/` folder - no downloads needed!_
 
-### Inter (Modern Bootstrap's Choice)
+### Inter (Modern Web Typography)
 
-- **Perfect for:** Clean, web-optimized typography used by modern Bootstrap sites
+- **Perfect for:** Clean, web-optimized typography for modern interfaces
 - **Used for:** Body text, headings, interface elements
 - **Source:** [Google Fonts - Inter](https://fonts.google.com/specimen/Inter)
 
-### JetBrains Mono (Developer Favorite)
+### JetBrains Mono (Developer-Friendly Monospace)
 
-- **Perfect for:** Clean, modern monospace that developers love
+- **Perfect for:** Clean, modern monospace preferred by many developers
 - **Used for:** Code snippets, monospace text
 - **Source:** [Google Fonts - JetBrains Mono](https://fonts.google.com/specimen/JetBrains+Mono)
 
@@ -84,15 +84,15 @@ _All fonts are already included in the `static/` folder - no downloads needed!_
    │   └── JetBrainsMono-Medium.ttf
    └── your_app.py
    ```
-3. **Restart your Streamlit app** and enjoy the Bootstrap familiarity!
+3. **Restart your Streamlit app** and enjoy the Bootstrap-inspired design!
 
 ## 🎨 Theme Configuration
 
-The magic happens in `.streamlit/config.toml`:
+The implementation happens in `.streamlit/config.toml`:
 
 ```toml
 [theme]
-primaryColor = "#0d6efd"              # Bootstrap 5's signature blue
+primaryColor = "#0d6efd"              # Bootstrap 5's primary blue
 backgroundColor = "#ffffff"           # Pure white - Bootstrap's foundation
 secondaryBackgroundColor = "#f8f9fa"  # Bootstrap's gray-50
 textColor = "#212529"                 # Bootstrap's body text color
@@ -102,28 +102,31 @@ borderColor = "#dee2e6"               # Bootstrap's border-color
 
 ## 🏆 The Developer Recognition Factor
 
-Every developer will look at this and think: "This looks like a professional web application." It has that instant credibility of Bootstrap's design system - systematic, clean, and trustworthy.
+Many developers will recognize this aesthetic and think: "This looks like a professional web application." It has the visual credibility of Bootstrap's design system - systematic, clean, and trustworthy.
 
-It's like putting your Streamlit app in a perfectly tailored Bootstrap suit! 👔
+This theme bridges the gap between "obviously Streamlit" and "looks like a real web app" by using familiar design patterns from one of the web's most popular frameworks.
 
-This theme bridges the gap between "obviously Streamlit" and "looks like a real web app" better than any other approach. Pure developer comfort zone!
+## 💡 Why Bootstrap-Inspired Design Works
 
-## 💡 Why Bootstrap Styling Works
-
-✅ **Instant Credibility** - Users trust interfaces that look familiar  
+✅ **Familiar Patterns** - Users trust interfaces with recognizable design patterns  
 ✅ **Professional Polish** - Systematic design that feels intentional  
-✅ **Developer Comfort** - Every web developer has used Bootstrap  
-✅ **Enterprise Ready** - Safe choice for business applications  
-✅ **Responsive Feel** - Looks great on any screen size
+✅ **Developer Familiarity** - Many web developers have experience with Bootstrap  
+✅ **Enterprise Appropriate** - Conservative, professional choice for business applications  
+✅ **Responsive Principles** - Based on mobile-first design thinking  
+✅ **Well-Documented** - Based on Bootstrap's publicly available design system
 
 ## 🎯 Pro Tips
 
-- **Perfect for client presentations** - familiar = trustworthy
-- **Great for internal tools** that need quick adoption
+- **Perfect for client presentations** - familiar patterns build trust
+- **Great for internal tools** that need quick user adoption
 - **Ideal for data dashboards** that business users will access
-- **Excellent for prototypes** that need to feel "real"
+- **Excellent for prototypes** that need to feel production-ready
+
+## 🤝 Contributing
+
+Found a way to make this theme even better? We'd love to see it! Open an issue or submit a PR.
 
 ---
 
-**Built with 💙 for developers who love familiar, reliable design**  
+**Built with 💙 for developers who appreciate familiar, reliable design**  
 _Bringing Bootstrap's trusted aesthetic to the Streamlit world_ 🚀
