@@ -14,7 +14,7 @@ This theme exudes the authority and trustworthiness of top-tier financial instit
 **📊 Charcoal Text** (#1f2937) - Serious, readable, professional contrast  
 **🏢 Sophisticated Grays** - Subtle backgrounds that don't distract from data  
 **⚖️ Conservative Design** - Clean lines, subtle rounding, serious aesthetics  
-**💰 Enterprise Typography** - Inter is used by major financial institutions  
+**💰 Enterprise Typography** - Professional font choice for serious business applications  
 **🎯 High Contrast** - Meets enterprise accessibility standards
 
 ## 🎯 Perfect For
@@ -57,7 +57,7 @@ _All fonts are already included in the `static/` folder - no downloads needed!_
 
 ### Inter (Enterprise Standard)
 
-- **Perfect for:** Professional typography trusted by financial institutions worldwide
+- **Perfect for:** Professional typography for business and enterprise applications
 - **Used for:** Body text, headings, interface elements
 - **Source:** [Google Fonts - Inter](https://fonts.google.com/specimen/Inter)
 
@@ -102,7 +102,7 @@ borderColor = "#d1d5db"                # Medium gray borders - clear definition
 
 ## 🏆 The Enterprise Recognition Factor
 
-This theme creates the same visual confidence you get from premium financial software like Bloomberg Terminal, Goldman Sachs internal tools, or specialized banking platforms.
+This theme creates the same visual confidence you get from premium financial software or specialized banking platforms.
 
 It says "This is professional financial software you can trust with critical business data."
 
@@ -127,16 +127,6 @@ Perfect for:
 - **Great for regulatory environments** - serious, compliant appearance
 - **Ideal for financial data** - high contrast supports precise reading
 - **Excellent for executive dashboards** - sophisticated without being flashy
-
-## 🏦 Financial Industry Approved
-
-This color palette and typography combination is trusted by:
-
-- Major banks and financial institutions
-- Investment management firms
-- Insurance companies
-- Accounting and consulting firms
-- Government financial agencies
 
 ---
 

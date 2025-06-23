@@ -1,7 +1,6 @@
 [server]
 enableStaticServing = true
 
-# Roboto - Google's signature Material Design font
 [[theme.fontFaces]]
 family = "Roboto"
 url = "app/static/Roboto-Regular.ttf"
@@ -20,7 +19,6 @@ url = "app/static/Roboto-Bold.ttf"
 style = "normal"
 weight = 700
 
-# Roboto Mono for code - Google's Material monospace
 [[theme.fontFaces]]
 family = "RobotoMono"
 url = "app/static/RobotoMono-Regular.ttf"
@@ -41,7 +39,7 @@ weight = 700
 
 [theme]
 # 📱 MATERIAL DESIGN PALETTE 📱
-primaryColor = "#1976d2"             # Material Blue-700 - Pure Material Designs
+primaryColor = "#1976d2"             # Material Blue-700 - Material Design standard
 backgroundColor = "#ffffff"          # Pure white - Material foundation
 secondaryBackgroundColor = "#f5f5f5" # Material Grey-100 - elevation surfaces
 textColor = "#212121"                # Material Grey-900 - high contrast

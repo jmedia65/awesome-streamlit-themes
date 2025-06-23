@@ -1,7 +1,6 @@
 [server]
 enableStaticServing = true
 
-# IBM Plex Sans - trusted by healthcare institutions worldwide
 [[theme.fontFaces]]
 family = "IBMPlexSans"
 url = "app/static/IBMPlexSans-Regular.ttf"
@@ -26,7 +25,6 @@ url = "app/static/IBMPlexSans-Bold.ttf"
 style = "normal"
 weight = 700
 
-# IBM Plex Mono for code - clinical precision
 [[theme.fontFaces]]
 family = "IBMPlexMono"
 url = "app/static/IBMPlexMono-Regular.ttf"
@@ -49,7 +47,7 @@ linkColor = "#0052a3"                # Darker medical blue for links
 borderColor = "#dee2e6"              # Soft gray borders - clean definition
 showWidgetBorder = true
 baseRadius = "0.25rem"               # Minimal rounding - clinical precision
-font = "IBMPlexSans"                 # IBM Plex - used by healthcare systems
+font = "IBMPlexSans"                 # IBM Plex - professional enterprise font
 headingFont = "IBMPlexSans"          # Consistent typography hierarchy
 codeFont = "IBMPlexMono"             # Monospace for clinical precision
 codeBackgroundColor = "#f1f3f4"      # Very light gray for code

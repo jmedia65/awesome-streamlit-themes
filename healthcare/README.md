@@ -10,11 +10,11 @@ When patient data and medical insights need professional presentation, this them
 
 This theme embodies the professionalism and trustworthiness essential for healthcare applications:
 
-**💙 Medical Blue Primary** (#0066cc) - The universal color of healthcare trust  
+**💙 Medical Blue Primary** (#0066cc) - Professional blue commonly associated with healthcare  
 **🧼 Clinical White Background** - Clean, sterile, professional atmosphere  
-**📊 High Contrast Text** - Meets accessibility standards for medical software  
-**🔲 Minimal Rounding** - Sharp, precise edges like medical equipment  
-**⚕️ IBM Plex Typography** - Enterprise font designed for business applications
+**📊 High Contrast Text** - Designed for clear readability in professional environments  
+**🔲 Minimal Rounding** - Sharp, precise edges for professional appearance  
+**⚕️ IBM Plex Typography** - Enterprise font designed for business applications  
 **🩹 Soft Borders** - Gentle definition without being harsh
 
 ## 🎯 Perfect For
@@ -57,13 +57,13 @@ _All fonts are already included in the `static/` folder - no downloads needed!_
 
 ### IBM Plex Sans
 
-- **Perfect for:** Enterprise healthcare systems and medical interfaces
+- **Perfect for:** Professional healthcare interfaces and business applications
 - **Used for:** Body text, headings, patient information displays
 - **Source:** [Google Fonts - IBM Plex Sans](https://fonts.google.com/specimen/IBM+Plex+Sans)
 
 ### IBM Plex Mono
 
-- **Perfect for:** Medical data, patient records, precise clinical information
+- **Perfect for:** Technical data display and precise information presentation
 - **Used for:** Code snippets, data tables, medical ID numbers
 - **Source:** [Google Fonts - IBM Plex Mono](https://fonts.google.com/specimen/IBM+Plex+Mono)
 
@@ -88,43 +88,45 @@ _All fonts are already included in the `static/` folder - no downloads needed!_
 
 ## 🎨 Theme Configuration
 
-The magic happens in `.streamlit/config.toml`:
+The implementation happens in `.streamlit/config.toml`:
 
 ```toml
 [theme]
-primaryColor = "#0066cc"              # Medical blue - trust, reliability, clinical
+primaryColor = "#0066cc"              # Professional medical blue
 backgroundColor = "#fafbfc"           # Off-white - clinical clean but not harsh
-secondaryBackgroundColor = "#f4f6f8"  # Light gray-blue - subtle medical feel
+secondaryBackgroundColor = "#f4f6f8"  # Light gray-blue - subtle professional feel
 textColor = "#2c3e50"                 # Dark blue-gray - highly readable
 linkColor = "#0052a3"                 # Darker medical blue for links
 borderColor = "#dee2e6"               # Soft gray borders - clean definition
 ```
 
-## 🏆 The Medical-Grade Difference
+## 🏆 The Professional Healthcare Difference
 
-This theme says "This is professional medical software you can trust with critical health data."
+This theme creates the visual impression of professional medical software designed for critical healthcare applications.
 
 Perfect for:
 
 - **Medical research platforms** - Academic credibility and professionalism
-- **Healthcare compliance tools** - Meets medical software visual standards
+- **Healthcare compliance tools** - Professional appearance for regulatory environments
 - **Clinical decision support** - Clean, distraction-free environment
+- **Patient-facing applications** - Professional appearance that builds confidence
 
-## 💡 Why Healthcare Design Matters
+## 💡 Why Healthcare-Focused Design Matters
 
-✅ **Clinical Clarity** - High contrast supports accurate data reading  
-✅ **Accessibility First** - Meets medical software accessibility standards  
-✅ **Professional Credibility** - Visual language of trusted medical institutions  
-✅ **Patient Trust** - Medical blue builds immediate confidence
+✅ **Clinical Clarity** - High contrast design supports accurate data reading  
+✅ **Professional Appearance** - Color scheme and typography choices convey seriousness  
+✅ **Accessibility Considerations** - Designed with readability and usability in mind  
+✅ **Trust Building** - Professional medical aesthetic helps establish credibility  
+✅ **Clean Interface** - Minimal design reduces visual distractions from important data
 
 ## 🎯 Pro Tips
 
-- **Perfect for patient-facing tools** - builds immediate medical trust
-- **Great for clinical workflows** - familiar to healthcare professionals
-- **Ideal for medical data visualization** - clean background highlights insights
-- **Excellent for telehealth platforms** - professional yet approachable
+- **Perfect for patient-facing tools** - professional appearance builds trust
+- **Great for clinical workflows** - clean design supports focused work
+- **Ideal for medical data visualization** - neutral background highlights important information
+- **Excellent for telehealth platforms** - professional yet approachable appearance
 
 ---
 
-**Built with ⚕️ for healtcare applications**  
+**Built with ⚕️ for healthcare applications**  
 _Where patient trust and clinical precision matter most_ 🏥

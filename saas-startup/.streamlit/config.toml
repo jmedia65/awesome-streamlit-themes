@@ -1,7 +1,6 @@
 [server]
 enableStaticServing = true
 
-# DM Sans - the startup world's favorite font
 [[theme.fontFaces]]
 family = "DMSans"
 url = "app/static/DMSans-Regular.ttf"
@@ -26,7 +25,6 @@ url = "app/static/DMSans-Bold.ttf"
 style = "normal"
 weight = 700
 
-# Fira Code for code - developer-loved monospace
 [[theme.fontFaces]]
 family = "FiraCode"
 url = "app/static/FiraCode-Regular.ttf"
@@ -49,9 +47,9 @@ linkColor = "#7c3aed"                # Purple-600 - slightly darker for links
 borderColor = "#e4e4e7"              # Zinc-200 - clean, modern borders
 showWidgetBorder = true
 baseRadius = "0.75rem"               # Generous rounding - modern, friendly
-font = "DMSans"                      # DM Sans - startup favorite
+font = "DMSans"                      # DM Sans - modern startup-style typography
 headingFont = "DMSans"               # Consistent hierarchy
-codeFont = "FiraCode"                # Fira Code - developer-loved
+codeFont = "FiraCode"                # Fira Code - popular developer monospace
 codeBackgroundColor = "#f4f4f5"      # Zinc-100 - subtle code background
 showSidebarBorder = true
 

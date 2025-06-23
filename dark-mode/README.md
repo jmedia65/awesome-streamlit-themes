@@ -2,7 +2,7 @@
 
 **The ultimate late-night coding companion for Streamlit apps!**
 
-Perfect for developer tools, monitoring dashboards, and any app that needs that professional "I belong in VS Code" aesthetic. Your eyes will thank you! 👀✨
+Perfect for developer tools, monitoring dashboards, and any app that needs that professional "I belong in VS Code" aesthetic.✨
 
 ![Dark Mode Developer Theme](dark-mode-dev.png)
 
@@ -10,10 +10,10 @@ Perfect for developer tools, monitoring dashboards, and any app that needs that 
 
 This theme captures the exact visual comfort of your favorite development environment:
 
-**🖤 GitHub Dark Background** (#0d1117) - The exact color developers stare at for hours  
+**🖤 GitHub-Like Dark Background** (#0d1117) - The color developers stare at for hours  
 **💜 Purple Accent** (#a855f7) - Modern, vibrant, code-like energy  
 **👁️ Eye-Friendly Text** (#f0f6fc) - Perfect contrast for late-night sessions  
-**🔗 GitHub Blue Links** (#58a6ff) - Instantly familiar navigation  
+**🔗 GitHub-Like Blue Links** (#58a6ff) - Instantly familiar navigation  
 **⚡ JetBrains Mono Code** - Ligatures, perfect spacing, developer bliss  
 **🎯 VS Code Vibes** - Sidebar colors that feel like home
 
@@ -57,7 +57,7 @@ _All fonts are already included in the `static/` folder - no downloads needed!_
 
 ### Inter (Developer UI Standard)
 
-- **Perfect for:** Clean, modern UI text used by GitHub, Figma, and top developer tools
+- **Perfect for:** Clean, modern, developer-friendly UI text
 - **Used for:** Body text, headings, interface elements
 - **Source:** [Google Fonts - Inter](https://fonts.google.com/specimen/Inter)
 
@@ -94,10 +94,10 @@ The magic happens in `.streamlit/config.toml`:
 ```toml
 [theme]
 primaryColor = "#a855f7"              # Purple-500 - vibrant, code-like accent
-backgroundColor = "#0d1117"           # GitHub dark background
+backgroundColor = "#0d1117"           # GitHub-like dark background
 secondaryBackgroundColor = "#161b22"  # Slightly lighter - cards and sections
 textColor = "#f0f6fc"                 # Light blue-white - easy on eyes
-linkColor = "#58a6ff"                 # GitHub blue - familiar developer color
+linkColor = "#58a6ff"                 # GitHub-like blue - familiar developer color
 borderColor = "#30363d"               # Dark gray borders
 ```
 
@@ -105,13 +105,10 @@ borderColor = "#30363d"               # Dark gray borders
 
 Every developer will look at this and immediately think: "This looks like professional developer tooling." It has that instant credibility of GitHub, VS Code, and Cursor combined!
 
-Your dev team will actually **WANT** to use internal tools that look this good! No more "ugh, another ugly internal dashboard" - this makes Streamlit apps feel like premium developer software.
-
-**Bonus:** Perfect for late-night coding sessions without burning your retinas! 👀✨
+Your dev team will actually **WANT** to use internal tools that look this good. This theme makes Streamlit apps feel like premium developer software.
 
 ## 💡 Pro Tips
 
-- **Use with dark themes** in your IDE for consistent experience
 - **Perfect for technical audiences** who live in dark mode
 - **Great for data that benefits** from high contrast
 - **Ideal for monitoring dashboards** that run 24/7

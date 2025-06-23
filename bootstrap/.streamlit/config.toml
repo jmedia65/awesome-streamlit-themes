@@ -39,15 +39,15 @@ weight = 500
 
 [theme]
 # 💙 CLASSIC BOOTSTRAP PALETTE 💙
-primaryColor = "#0d6efd"              # Bootstrap 5's signature blue - instantly recognizable
+primaryColor = "#0d6efd"              # Bootstrap 5's primary blue - widely recognized
 backgroundColor = "#ffffff"           # Pure white - Bootstrap's clean foundation
 secondaryBackgroundColor = "#f8f9fa"  # Bootstrap's gray-50 - subtle card backgrounds
-textColor = "#212529"                 # Bootstrap's body text color - perfect contrast
+textColor = "#212529"                 # Bootstrap's body text color - high contrast
 linkColor = "#0d6efd"                 # Bootstrap primary for links - consistent branding
 borderColor = "#dee2e6"               # Bootstrap's border-color - clean separation
 showWidgetBorder = true
 baseRadius = "0.375rem"               # Bootstrap's default border-radius - familiar feel
-font = "Inter"                        # Inter - modern Bootstrap's choice for web
+font = "Inter"                        # Inter - clean, modern web typography
 headingFont = "Inter"                 # Consistent typography - Bootstrap style
 codeFont = "JetBrainsMono"            # Clean monospace for code blocks
 codeBackgroundColor = "#f8f9fa"       # Light gray code background - Bootstrap style

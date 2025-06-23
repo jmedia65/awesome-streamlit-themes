@@ -8,7 +8,7 @@ No more cookie-cutter dashboards. No more identical-looking apps. Just beautiful
 
 ## 🙏 Built on Streamlit's Amazing Foundation
 
-This project was inspired by [Thiago Teixeira](https://twitter.com/ThiagoTDotCom) (Streamlit co-founder) announcing [Streamlit's new theming capabilities](https://x.com/ThiagoTDotCom/status/1934679204320432283)! 🚀
+This project was inspired by Thiago Teixeira (Streamlit co-founder) announcing [Streamlit's new theming capabilities](https://x.com/ThiagoTDotCom/status/1934679204320432283)! 🚀
 
 The demo applications in this repo showcase the same UI elements from [Streamlit's official Anthropic-inspired example](https://github.com/streamlit/docs/tree/main/python/concept-source/theming-overview-anthropic-light-inspried) - this lets you see exactly how different themes transform the SAME interface. It's all about the visual transformation power of theming!
 
@@ -20,8 +20,8 @@ The demo applications in this repo showcase the same UI elements from [Streamlit
 Perfect for medical dashboards and clinical applications
 
 - Clinical blue design
-- Medical-grade professionalism
-- Accessibility-focused
+- Professional medical appearance
+- Designed with accessibility in mind
 - IBM Plex Sans typography
 
 [📋 View Theme →](healthcare/)
@@ -30,12 +30,12 @@ Perfect for medical dashboards and clinical applications
 
 ## 💼 [Bootstrap Theme](bootstrap/)
 
-Familiar styling every developer recognizes and loves
+Familiar styling many developers recognize
 
 - Classic Bootstrap blue
 - Inter typography
 - Developer-friendly
-- Instantly recognizable
+- Widely recognizable
 
 [📋 View Theme →](bootstrap/)
 
@@ -47,7 +47,7 @@ For late-night coding sessions and developer tools
 
 - GitHub-like Dark colors
 - JetBrains Mono code font
-- Eye-friendly design
+- Comfortable for extended use
 - VS Code vibes
 
 [📋 View Theme →](dark-mode/)
@@ -87,7 +87,7 @@ Professional content-focused design
 - Editorial red accents
 - Serif typography
 - High readability
-- Publishing-grade
+- Professional publishing appearance
 
 [📋 View Theme →](editorial/)
 
@@ -95,7 +95,7 @@ Professional content-focused design
 
 ## 🎯 [Tailwind-Inspired](tailwind/)
 
-Modern web standards everyone loves
+Modern web standards many developers appreciate
 
 - Clean blue design
 - Inter typography
@@ -108,7 +108,7 @@ Modern web standards everyone loves
 
 ## 💰 [Financial/Professional](financial/)
 
-Corporate-grade design for serious business
+Professional corporate appearance for serious business
 
 - Deep navy colors
 - Inter typography
@@ -138,7 +138,7 @@ Adorable design for educational apps
 
 - Warm, soft colors
 - Comic Neue typography
-- Child-safe design
+- Child-friendly design
 - Maximum cuteness
 
 [📋 View Theme →](toddler/)

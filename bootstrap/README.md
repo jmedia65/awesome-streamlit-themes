@@ -122,10 +122,6 @@ This theme bridges the gap between "obviously Streamlit" and "looks like a real 
 - **Ideal for data dashboards** that business users will access
 - **Excellent for prototypes** that need to feel production-ready
 
-## 🤝 Contributing
-
-Found a way to make this theme even better? We'd love to see it! Open an issue or submit a PR.
-
 ---
 
 **Built with 💙 for developers who appreciate familiar, reliable design**  

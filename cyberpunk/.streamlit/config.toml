@@ -1,7 +1,6 @@
 [server]
 enableStaticServing = true
 
-# Orbitron - Perfect sci-fi futuristic font
 [[theme.fontFaces]]
 family = "Orbitron"
 url = "app/static/Orbitron-Regular.ttf"
@@ -32,7 +31,6 @@ url = "app/static/Orbitron-ExtraBold.ttf"
 style = "normal"
 weight = 800
 
-# Source Code Pro for that retro terminal vibe
 [[theme.fontFaces]]
 family = "SourceCodePro"
 url = "app/static/SourceCodePro-Regular.ttf"

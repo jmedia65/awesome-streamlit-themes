@@ -1,7 +1,6 @@
 [server]
 enableStaticServing = true
 
-# Inter font family - the quintessential modern web font
 [[theme.fontFaces]]
 family = "Inter"
 url = "app/static/Inter_18pt-Regular.ttf"
@@ -26,7 +25,6 @@ url = "app/static/Inter_18pt-Bold.ttf"
 style = "normal"
 weight = 700
 
-# JetBrains Mono for code - clean, modern monospace
 [[theme.fontFaces]]
 family = "JetBrainsMono"
 url = "app/static/JetBrainsMono-Regular.ttf"
