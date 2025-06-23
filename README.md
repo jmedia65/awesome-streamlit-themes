@@ -4,6 +4,8 @@
 
 No more cookie-cutter dashboards. No more identical-looking apps. Just beautiful, professional themes that make your Python apps shine! ✨
 
+![Awesome Streamlit Themes](assets/streamlit-themes.png)
+
 ## 🙏 Built on Streamlit's Amazing Foundation
 
 This project was inspired by [Thiago Teixeira](https://twitter.com/ThiagoTDotCom) (Streamlit co-founder) announcing [Streamlit's new theming capabilities](https://x.com/ThiagoTDotCom/status/1934679204320432283)! 🚀
