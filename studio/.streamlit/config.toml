@@ -1,0 +1,56 @@
+# Fixed Financial shell. Visitor state never writes to this file.
+[server]
+enableStaticServing = true
+headless = true
+fileWatcherType = "none"
+
+[browser]
+gatherUsageStats = false
+
+[client]
+toolbarMode = "minimal"
+
+[theme]
+base = "light"
+primaryColor = "#1e3a8a"
+backgroundColor = "#fefefe"
+secondaryBackgroundColor = "#f8fafc"
+textColor = "#1f2937"
+linkColor = "#1e40af"
+borderColor = "#d1d5db"
+showWidgetBorder = true
+baseRadius = "0.375rem"
+font = "Inter"
+headingFont = "Inter"
+codeFont = "SourceCodePro"
+codeBackgroundColor = "#f3f4f6"
+showSidebarBorder = true
+
+[theme.sidebar]
+backgroundColor = "#f1f5f9"
+secondaryBackgroundColor = "#e5e7eb"
+
+[[theme.fontFaces]]
+family = "Inter"
+url = "app/static/Inter_18pt-Regular.ttf"
+weight = 400
+
+[[theme.fontFaces]]
+family = "Inter"
+url = "app/static/Inter_18pt-Medium.ttf"
+weight = 500
+
+[[theme.fontFaces]]
+family = "Inter"
+url = "app/static/Inter_18pt-SemiBold.ttf"
+weight = 600
+
+[[theme.fontFaces]]
+family = "Inter"
+url = "app/static/Inter_18pt-Bold.ttf"
+weight = 700
+
+[[theme.fontFaces]]
+family = "SourceCodePro"
+url = "app/static/SourceCodePro-Regular.ttf"
+weight = 400

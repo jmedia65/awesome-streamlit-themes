@@ -1,4 +1,6 @@
 # Files and Folders
+# Local operator notes and prompts; never publish.
+/docs/
 .streamlit_anthropic/
 static_anthropic/
 _original_anthropic
@@ -141,9 +143,14 @@ celerybeat.pid
 
 # Environments
 .env
+.env.*
+!.env.example
+**/.streamlit/secrets.toml
 .envrc
 .venv
 .venv/
+.local/
+studio/static/
 env/
 venv/
 ENV/

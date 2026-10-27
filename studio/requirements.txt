@@ -1,0 +1,2 @@
+streamlit==1.66.1
+tomli-w==1.2.0
