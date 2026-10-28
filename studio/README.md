@@ -20,7 +20,7 @@ Tested runtime: **Streamlit 1.66.1 / Python 3.13.12**. This is an exact tested t
 
 1. Start in **All 10 themes**, then choose Healthcare (or another original theme) to open the Studio. The fixed shell uses Financial.
 2. Adjust Accent or Canvas. That is all you need for a quick variation; the other controls stay collapsed.
-3. Choose **This appearance** for one design or **Light + dark** for a switchable pair. **Edit appearance** changes which palette you are working on; each keeps its own colors. The original appearance comes from the repository; its counterpart is a curated Studio starting point.
+3. Choose **Only light** / **Only dark** for the selected design or **Light + dark** for a switchable pair. **Edit appearance** changes which palette you are working on; each keeps its own colors. The original appearance comes from the repository, with a deeper Developer accent for more readable button text; each counterpart is a Studio starting point. Historical demos remain untouched.
 4. Optionally open **Typography & shape**, **Sidebar**, or **Advanced**. There are three bundled body/heading font choices and three code font choices. Typography and the sidebar divider are shared across appearances. Colors, corners and widget borders belong to the appearance you are editing.
 5. Switch Dashboard / Components, or compare **Current edits** with **Preset defaults**. Comparing does not replace your edits or change the download. Reset restores the whole preset, including both appearances.
 6. Browse **All 10 themes** and choose another preset. If you have changes, choose **Keep editing** or explicitly discard them before switching.

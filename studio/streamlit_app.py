@@ -18,6 +18,12 @@ st.html("""<style>
 h1{letter-spacing:-1.5px;font-weight:650!important;font-size:2.65rem!important;line-height:1.12!important}
 h2{letter-spacing:-.6px;font-size:1.45rem!important}h3{font-size:1.05rem!important}
 .st-key-controls{background:#f8fafc}.st-key-preview_frame{padding:0!important;overflow:hidden}
+/* Streamlit 1.66.1: replace only the single HEX field's visible caption.
+   Keep the native input/label association and RGB/HSL captions intact. */
+[data-testid="stColorPickerPopover"] .flexbox-fix > div:only-child > div:has(> input) > label{
+font-size:0!important;text-transform:none!important}
+[data-testid="stColorPickerPopover"] .flexbox-fix > div:only-child > div:has(> input) > label::after{
+content:" Press Esc to confirm";font-size:11px;line-height:11px}
 @media(max-width:700px){.stMainBlockContainer{padding:1.4rem 1rem}h1{font-size:2rem!important}}
 </style>""")
 
@@ -169,19 +175,19 @@ else:
             st.caption(selected.description)
             st.caption(f"{len(changes)} changed settings · session only" if changes else "Preset defaults · ready to try")
             if editable:
-                st.radio("Include in your download", ["single", "paired"], key="export_scope", horizontal=True,
-                         format_func=lambda value: "This appearance" if value == "single" else "Light + dark",
+                st.radio("Include in your download:", ["single", "paired"], key="export_scope", horizontal=True,
+                         format_func=lambda value: f"Only {mode}" if value == "single" else "Light + dark",
                          on_change=store_choice, args=("export_scope", "output"))
                 st.segmented_control("Edit appearance", ["light", "dark"], key="edit_appearance", required=True,
                                      format_func=str.capitalize, on_change=store_choice, args=("edit_appearance", "appearance"))
-                st.caption("Light and dark have separate colors. The added appearance is a curated Studio starting point.")
+                st.caption("Light and dark have separate colors.")
             st.markdown("**Colors**")
             color_controls([("accent", "Accent"), ("background", "Canvas")])
             if editable:
                 with st.expander("Typography & shape"):
                     st.caption("Fonts apply to both appearances and the sidebar.")
-                    for key, label, options in (("body_font", "Body font", FONT_CHOICES),
-                                                ("heading_font", "Heading font", FONT_CHOICES),
+                    for key, label, options in (("heading_font", "Heading font", FONT_CHOICES),
+                                                ("body_font", "Body font", FONT_CHOICES),
                                                 ("code_font", "Code font", CODE_FONT_CHOICES)):
                         st.selectbox(label, list(options), key=key, format_func=options.get,
                                      on_change=store_font, args=(key,))
@@ -194,8 +200,8 @@ else:
                                     ("sidebar_text", "Sidebar text")], disabled=not variant["sidebar_custom"])
                     st.caption("Accent, links, borders and fonts inherit the main appearance.")
                 with st.expander("Advanced"):
-                    color_controls([("surface", "Surface"), ("text", "Text"), ("link", "Links"),
-                                    ("border", "Borders"), ("code_background", "Code canvas")])
+                    color_controls([("text", "Text"), ("link", "Links"), ("border", "Borders"),
+                                    ("surface", "Surface"), ("code_background", "Code canvas")])
                     st.checkbox("Show widget borders", key="widget_border", on_change=store_control, args=("widget_border", mode))
                     st.checkbox("Show sidebar divider · both appearances", key="sidebar_border", on_change=store_choice,
                                 args=("sidebar_border", "showSidebarBorder"))
@@ -269,6 +275,6 @@ else:
 
 st.divider()
 with st.container(horizontal=True, horizontal_alignment="distribute", vertical_alignment="center"):
-    st.caption("Awesome Streamlit Themes · by jmedia65. Your edits last for this session; refreshing or leaving may lose them. Download to keep your theme.")
+    st.caption("Awesome Streamlit Themes · by [Max Braglia](https://maxbraglia.com/). Your edits last for this session; refreshing or leaving may lose them. Download to keep your theme.")
     st.markdown("[Source & credits](https://github.com/jmedia65/awesome-streamlit-themes) &nbsp; · &nbsp; "
                 "[Feedback](https://github.com/jmedia65/awesome-streamlit-themes/issues)")

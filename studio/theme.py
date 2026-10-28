@@ -190,6 +190,9 @@ def preset_draft(slug):
     mode = get_preset(slug).appearance
     variant = {key: deepcopy(value) for key, value in source.items()
                if key in COLORS | {"baseRadius", "showWidgetBorder", "sidebar"}}
+    if slug == "dark-mode":
+        # Refresh the Studio default without modifying the historical demo.
+        variant["primaryColor"] = "#9333ea"
     variant["buttonRadius"] = source["baseRadius"]
     variant["sidebar"].setdefault("textColor", source["textColor"])
     variant["sidebar_custom"] = True

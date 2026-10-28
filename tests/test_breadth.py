@@ -14,7 +14,7 @@ from streamlit.testing.v1 import AppTest
 
 from studio.catalog import ROOT, get_preset, load_theme
 from studio.export import config_bytes, export_package
-from studio.theme import (EDITABLE_PRESETS, ThemeError, contrast_advisories, draft_changes,
+from studio.theme import (EDITABLE_PRESETS, ThemeError, contrast_advisories, contrast_ratio, draft_changes,
                           draft_theme, preset_draft, validate_theme)
 
 
@@ -40,7 +40,8 @@ def test_three_defaults_preserve_original_identity_and_have_distinct_counterpart
     original = load_theme(slug)
     for key in ("primaryColor", "backgroundColor", "secondaryBackgroundColor", "textColor",
                 "font", "headingFont", "codeFont", "baseRadius", "showWidgetBorder", "showSidebarBorder"):
-        assert theme[key] == original[key]
+        expected = "#9333ea" if slug == "dark-mode" and key == "primaryColor" else original[key]
+        assert theme[key] == expected
     assert not draft_changes(slug, draft)
     assert theme["base"] == get_preset(slug).appearance
     opposite = "light" if theme["base"] == "dark" else "dark"
@@ -194,7 +195,7 @@ def test_dirty_switch_requires_choice_and_cancel_preserves_both_appearances(via_
         app.selectbox(key="preset_picker").select("dark-mode").run()
     app.button(key="discard_switch").click().run()
     assert app.session_state.preset == "dark-mode"
-    assert app.color_picker(key="accent").value == "#a855f7"
+    assert app.color_picker(key="accent").value == "#9333ea"
     assert not app.exception
 
 
@@ -207,7 +208,7 @@ def test_paired_warnings_include_hidden_mode_and_visitors_are_independent():
     assert app.get("download_button")
     other = editor("dark-mode")
     assert other.radio(key="export_scope").value == "single"
-    assert other.color_picker(key="accent").value == "#a855f7"
+    assert other.color_picker(key="accent").value == "#9333ea"
     assert app.color_picker(key="accent").value == "#2563eb"
 
 
@@ -248,3 +249,42 @@ assert any(title.value=='A clearer view of your work.' for title in app.title)
 '''
     result = subprocess.run([sys.executable, "-c", code], cwd=tmp_path, capture_output=True, text=True, timeout=45)
     assert result.returncode == 0, result.stderr
+
+
+def test_dynamic_single_label_keeps_export_scope_and_config_in_sync():
+    app = editor("financial")
+    assert app.radio(key="export_scope").options == ["Only light", "Light + dark"]
+    set_mode(app, "dark")
+    assert app.radio(key="export_scope").options == ["Only dark", "Light + dark"]
+    assert app.radio(key="export_scope").value == "single"
+    assert tomllib.loads(app.code[0].value)["theme"]["base"] == "dark"
+    app.radio(key="export_scope").set_value("paired").run()
+    paired = app.code[0].value
+    set_mode(app, "light")
+    assert app.radio(key="export_scope").options == ["Only light", "Light + dark"]
+    assert app.radio(key="export_scope").value == "paired"
+    assert app.code[0].value == paired
+    set_mode(app, "dark")
+    assert app.radio(key="export_scope").options == ["Only dark", "Light + dark"]
+    assert app.radio(key="export_scope").value == "paired"
+    assert app.code[0].value == paired
+
+
+def test_studio_developer_default_has_readable_button_text_and_preserves_original():
+    original = load_theme("dark-mode")
+    assert original["primaryColor"] == "#a855f7"
+    draft = preset_draft("dark-mode")
+    theme = draft_theme(draft)
+    assert theme["primaryColor"] == "#9333ea"
+    assert contrast_ratio("#ffffff", theme["primaryColor"]) >= 4.5
+    assert not contrast_advisories(theme)
+    assert not draft_changes("dark-mode", draft)
+    assert tomllib.loads(config_bytes(theme).decode())["theme"]["primaryColor"] == "#9333ea"
+    assert draft_theme(draft, output="paired")["dark"]["primaryColor"] == "#9333ea"
+    app = editor("dark-mode")
+    assert not app.warning
+    app.color_picker(key="accent").set_value("#a855f7").run()
+    assert any("Primary button text contrast" in warning.value for warning in app.warning)
+    app.button[0].click().run()
+    assert app.color_picker(key="accent").value == "#9333ea"
+    assert not app.warning

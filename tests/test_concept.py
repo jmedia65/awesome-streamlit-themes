@@ -45,7 +45,7 @@ def test_gallery_choice_syncs_controls_and_new_visitor_is_independent():
     app.get("segmented_control")[0].set_value("All 10 themes").run()
     app.button(key="choose_dark-mode").click().run()
     assert app.selectbox(key="preset_picker").value == "dark-mode"
-    assert app.color_picker(key="accent").value == "#a855f7"
+    assert app.color_picker(key="accent").value == "#9333ea"
     assert app.selectbox(key="body_font").value == "Inter"
     assert concept().selectbox(key="preset_picker").value == "healthcare"
     assert not app.exception
@@ -61,8 +61,9 @@ def test_dropdown_switch_synchronizes_frontend_then_radius_keeps_palette(preset)
     assert app.button(key="discard_switch")
     app.button(key="discard_switch").click().run()
     source = load_theme(preset.slug)
+    accent = "#9333ea" if preset.slug == "dark-mode" else source["primaryColor"]
     assert not app.exception
-    assert app.color_picker(key="accent").value == source["primaryColor"]
+    assert app.color_picker(key="accent").value == accent
     assert app.color_picker(key="background").value == source["backgroundColor"]
     # Backend values alone missed the browser desynchronization regression.
     assert app.color_picker(key="accent").proto.set_value
@@ -70,7 +71,7 @@ def test_dropdown_switch_synchronizes_frontend_then_radius_keeps_palette(preset)
     assert app.select_slider[0].value == source["baseRadius"]
     app.select_slider[0].set_value("1rem").run()
     assert app.select_slider[0].value == "1rem"
-    assert app.color_picker(key="accent").value == source["primaryColor"]
+    assert app.color_picker(key="accent").value == accent
     assert app.color_picker(key="background").value == source["backgroundColor"]
     app.button[0].click().run()
     assert app.select_slider[0].value == source["baseRadius"]
