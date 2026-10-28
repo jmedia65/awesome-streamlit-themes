@@ -6,7 +6,9 @@
 
 Start with one of ten themes. Make it yours. Take a complete theme package to your own app.
 
-**[Open the Studio](https://awesome-streamlit-themes.onrender.com/)** &nbsp; · &nbsp; **[Run locally](#run-locally)** &nbsp; · &nbsp; **[Explore the themes](#ten-starting-points)**
+## [Open the live Theme Studio →](https://awesome-streamlit-themes.onrender.com/)
+
+**[Run locally](#run-locally)** &nbsp; · &nbsp; **[Explore the themes](#ten-starting-points)**
 
 Streamlit **1.66.1** · Python **3.13** · Open source
 
