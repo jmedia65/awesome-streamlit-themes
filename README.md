@@ -16,7 +16,7 @@ Built by [Max Braglia](https://maxbraglia.com/) · Hosted on [Render](https://re
 
 </div>
 
-![The Theme Studio: a fixed workspace, simple color controls, and an isolated themed dashboard](assets/studio-overview.webp)
+![Theme Studio demo: Financial, Editorial and Cyberpunk switching between light and dark](assets/studio-demo.gif)
 
 ## Your app, with your theme
 
