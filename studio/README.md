@@ -39,23 +39,36 @@ Missing assets or notices block downloads. Contrast advisories flag common text/
 
 For native rendering checks, copy `studio/sample_app.py` into a separate project after installing an exported package, then run `streamlit run sample_app.py` from that project's root. The sample uses native widgets and synthetic data without custom CSS.
 
-## Managed hosting
+## Render Web Service
 
-The deployment target is a single DigitalOcean App Platform **Python web service** using its managed buildpack. Keep the source directory at the repository root (`/`): the Studio needs the sibling `themes/` and `licenses/` directories. Root `requirements.txt` supplies dependencies; `runtime.txt` pins the tested Python version. Leave the custom build command empty so the buildpack installs dependencies normally.
+The Studio is hosted as one [Render Web Service](https://render.com/docs/web-services) using the native Python runtime. Keep **Root Directory blank** so commands run from the repository root: the Studio needs the sibling `themes/` and `licenses/` directories.
 
-Set the HTTP port to **8080** and the run command to:
+Use these settings when deploying your own copy:
+
+| Setting | Value |
+|---|---|
+| Language | Python 3 |
+| Branch | `main` |
+| Build Command | `pip install -r requirements.txt` |
+| Environment variable | `PYTHON_VERSION=3.13.12` |
+| Health Check Path | `/_stcore/health` |
+| Auto-Deploy | Off |
+
+Set **Start Command** to:
 
 ```bash
-python -m studio --server.address=0.0.0.0 --server.port=8080
+python -m studio --server.address=0.0.0.0 --server.port=$PORT
 ```
 
-Use `/_stcore/health` for the HTTP health check. One instance is sufficient for the initial deployment; no database, worker, persistent disk or separate frontend is required. No Dockerfile or Docker tooling is needed. Keep automatic deployment off while reviewing the initial hosted candidate. Deploy only after approving the provider's current pricing and the exact source revision.
+Render supplies `PORT`. Set `PYTHON_VERSION` explicitly to match the tested runtime. The current deployment uses one **$7/month instance with 512 MB RAM**; check [Render's pricing](https://render.com/pricing) before creating a service. No database, worker, persistent disk, separate frontend or Docker tooling is required.
+
+Creating the service starts its first deployment. For later updates, use **Manual Deploy → Deploy latest commit**. To revert, choose a previous successful deploy and **Rollback**. Keep Auto-Deploy off for manual control.
 
 Streamlit session state is held in memory. Restarts, redeploys or a new session may lose unsaved edits. The health endpoint confirms the server is running; verify the actual editor, WebSocket connection, downloads and memory usage on the host before release.
 
 The website exposes the Studio, its displayed media/downloads and the public font assets in `studio/static/`. It does not expose a directory browser or arbitrary repository files. Unknown URLs may display the Studio shell rather than return a file. The full source, READMEs and original collection remain publicly available on GitHub.
 
-See DigitalOcean's [Python buildpack](https://docs.digitalocean.com/products/app-platform/reference/buildpacks/python/), [pricing](https://docs.digitalocean.com/products/app-platform/details/pricing/) and [deployment/rollback instructions](https://docs.digitalocean.com/products/app-platform/how-to/manage-deployments/).
+See Render's [Python version settings](https://render.com/docs/python-version), [manual deployments](https://render.com/docs/deploys#manual-deploys) and [rollbacks](https://render.com/docs/rollbacks).
 
 ## Development checks
 

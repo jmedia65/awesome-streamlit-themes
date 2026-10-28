@@ -10,13 +10,11 @@ Start with one of ten themes. Make it yours. Take a complete theme package to yo
 
 Streamlit **1.66.1** · Python **3.13** · Open source
 
-Built by [Max Braglia](https://maxbraglia.com/)
+Built by [Max Braglia](https://maxbraglia.com/) · Hosted on [Render](https://render.com/)
 
 </div>
 
 ![The Theme Studio: a fixed workspace, simple color controls, and an isolated themed dashboard](assets/studio-overview.webp)
-
-> The hosted Studio is not published yet. Run the same application locally below; the live link will appear here after release verification.
 
 ## Your app, with your theme
 
