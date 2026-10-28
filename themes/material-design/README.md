@@ -36,10 +36,10 @@ git clone https://github.com/jmedia65/awesome-streamlit-themes.git
 cd awesome-streamlit-themes
 
 # Install dependencies
-pip install -r requirements.txt
+pip install -r themes/requirements-legacy.txt
 
 # Navigate to material-design theme and see it in action
-cd material-design
+cd themes/material-design
 streamlit run streamlit_app.py
 ```
 

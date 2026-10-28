@@ -6,7 +6,7 @@ import shutil
 
 def prepare_assets():
     studio = Path(__file__).resolve().parent
-    source = studio.parent / "financial/static"
+    source = studio.parent / "themes/financial/static"
     destination = studio / "static"
     destination.mkdir(exist_ok=True)
     for path in source.iterdir():

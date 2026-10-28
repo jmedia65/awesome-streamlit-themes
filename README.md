@@ -1,214 +1,112 @@
-# 🎨 Awesome Streamlit Themes
+<div align="center">
 
-**Professional themes that transform your Streamlit apps from "obviously Streamlit" to "wow, that looks amazing!"**
+# Awesome Streamlit Theme Studio
 
-No more cookie-cutter dashboards. No more identical-looking apps. Just beautiful, professional themes that make your Python apps shine! ✨
+**A visual theme editor for Streamlit, built with Streamlit.**
 
-![Awesome Streamlit Themes](assets/streamlit-themes.png)
+Start with one of ten themes. Make it yours. Take a complete theme package to your own app.
 
-## 🙏 Built on Streamlit's Amazing Foundation
+**[Run the Studio](#run-locally)** &nbsp; · &nbsp; **[Explore the themes](#ten-starting-points)** &nbsp; · &nbsp; **[Use your theme](#use-your-theme)**
 
-This project was inspired by Thiago Teixeira (Streamlit co-founder) announcing [Streamlit's new theming capabilities](https://x.com/ThiagoTDotCom/status/1934679204320432283)! 🚀
+Streamlit **1.66.1** · Python **3.13** · Open source
 
-The demo applications in this repo showcase the same UI elements from [Streamlit's official Anthropic-inspired example](https://github.com/streamlit/docs/tree/main/python/concept-source/theming-overview-anthropic-light-inspried) - this lets you see exactly how different themes transform the SAME interface. It's all about the visual transformation power of theming!
+Built by [Max Braglia](https://maxbraglia.com/)
 
-**What we've added:** 10 professional theme configurations that make Streamlit apps look incredible.  
-**What Streamlit built:** The amazing theming system and demo interfaces that make this all possible.
+</div>
 
-## 🏥 [Healthcare Theme](healthcare/)
+![The Theme Studio: a fixed workspace, simple color controls, and an isolated themed dashboard](assets/studio-overview.webp)
 
-Perfect for medical dashboards and clinical applications
+> The hosted Studio is not published yet. Run the same application locally below; the live link will appear here after release verification.
 
-- Clinical blue design
-- Professional medical appearance
-- Designed with accessibility in mind
-- IBM Plex Sans typography
+## Your app, with your theme
 
-[📋 View Theme →](healthcare/)
+| Start with a design | Make a few changes | Take it with you |
+|---|---|---|
+| Ten distinct starting points, from Financial to Cyberpunk. | Accent and canvas up front. Typography, sidebar and additional styling stay tucked away until needed. | Copy the TOML or download a ZIP with configuration, referenced fonts, licenses and install steps. |
 
----
+- **Light, dark, or both.** Edit the two palettes independently; download one appearance or a switchable pair.
+- **Compare without losing your work.** Preview the preset, return to your edits, or reset. Switching presets asks before discarding changes.
+- **Try real app contexts.** Dashboard and Components previews show metrics, charts, tables, forms, headings and code.
+- **Keep it local.** No account, API key or database. Clone it, fork it, run it, change it.
 
-## 💼 [Bootstrap Theme](bootstrap/)
+The preview is an isolated HTML/CSS approximation. Native widgets, chart palettes, font scaling and responsive behavior can differ; the exported packages are also checked in native Streamlit samples.
 
-Familiar styling many developers recognize
+## Ten starting points
 
-- Classic Bootstrap blue
-- Inter typography
-- Developer-friendly
-- Widely recognizable
+Every theme supports the same editor, both appearances and a no-edit export. Each keeps its own typography and character. Studio defaults include small contrast refinements; the original collection stays available separately.
 
-[📋 View Theme →](bootstrap/)
+| | | |
+|:--|:--|:--|
+| ![Healthcare dashboard](studio/assets/previews/healthcare.webp) **Healthcare** · calm blue, IBM Plex | ![Financial dashboard](studio/assets/previews/financial.webp) **Financial** · navy, Inter | ![Dark Mode Developer dashboard](studio/assets/previews/dark-mode.webp) **Dark Mode Developer** · charcoal and purple |
+| ![Editorial dashboard](studio/assets/previews/editorial.webp) **Editorial** · Lora and Playfair Display | ![SaaS Startup dashboard](studio/assets/previews/saas-startup.webp) **SaaS / Startup** · violet, DM Sans | ![Bootstrap dashboard](studio/assets/previews/bootstrap.webp) **Bootstrap** · familiar blue |
+| ![Tailwind dashboard](studio/assets/previews/tailwind.webp) **Tailwind** · slate, Inter | ![Material Design dashboard](studio/assets/previews/material-design.webp) **Material Design** · blue, Roboto | ![Cyberpunk dashboard](studio/assets/previews/cyberpunk.webp) **Cyberpunk** · hot pink, cyan, Orbitron |
+| ![Toddler Friendly dashboard](studio/assets/previews/toddler.webp) **Toddler Friendly** · warm colors, Comic Neue and Fredoka | | |
 
----
+These are screenshots of the Studio's default Dashboard preview, using the bundled fonts and synthetic data.
 
-## 🌙 [Dark Mode Developer](dark-mode/)
+## Run locally
 
-For late-night coding sessions and developer tools
-
-- GitHub-like Dark colors
-- JetBrains Mono code font
-- Comfortable for extended use
-- VS Code vibes
-
-[📋 View Theme →](dark-mode/)
-
----
-
-## 📱 [Material Design](material-design/)
-
-Google's systematic design language
-
-- Material Blue palette
-- Roboto typography
-- Clean, familiar interface
-- Android-inspired
-
-[📋 View Theme →](material-design/)
-
----
-
-## 🚀 [SaaS/Startup](saas-startup/)
-
-Modern, growth-focused design for internal tools
-
-- Purple accent colors
-- DM Sans typography
-- Startup energy
-- Unicorn vibes
-
-[📋 View Theme →](saas-startup/)
-
----
-
-## 📰 [News/Editorial](editorial/)
-
-Professional content-focused design
-
-- Editorial red accents
-- Serif typography
-- High readability
-- Professional publishing appearance
-
-[📋 View Theme →](editorial/)
-
----
-
-## 🎯 [Tailwind-Inspired](tailwind/)
-
-Modern web standards many developers appreciate
-
-- Clean blue design
-- Inter typography
-- Familiar patterns
-- Web developer comfort
-
-[📋 View Theme →](tailwind/)
-
----
-
-## 💰 [Financial/Professional](financial/)
-
-Professional corporate appearance for serious business
-
-- Deep navy colors
-- Inter typography
-- Enterprise credibility
-- Boardroom-ready
-
-[📋 View Theme →](financial/)
-
----
-
-## 🌆 [Cyberpunk](cyberpunk/) _Fun Theme_
-
-Retro-future synthwave aesthetics
-
-- Hot pink and cyan
-- Orbitron typography
-- 80s vibes
-- Pure awesome
-
-[📋 View Theme →](cyberpunk/)
-
----
-
-## 🧸 [Toddler-Friendly](toddler/) _Fun Theme_
-
-Adorable design for educational apps
-
-- Warm, soft colors
-- Comic Neue typography
-- Child-friendly design
-- Maximum cuteness
-
-[📋 View Theme →](toddler/)
-
----
-
-## 🚀 Quick Start
+Use **Python 3.13**. From a terminal:
 
 ```bash
-# Clone the entire repo to see all themes
 git clone https://github.com/jmedia65/awesome-streamlit-themes.git
 cd awesome-streamlit-themes
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Choose any theme and see it in action (example: healthcare)
-cd healthcare
-streamlit run streamlit_app.py
+python3.13 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+python -m studio
 ```
 
-**Love what you see?** Copy the theme to your project:
+On Windows, create the environment with `py -3.13 -m venv .venv` and activate it with `.venv\Scripts\Activate.ps1`.
+
+Open **http://localhost:8501**. The launcher prepares the fixed workspace's bundled fonts and loads its own configuration. Your theme edits stay in your browser session and never overwrite the Studio's shared theme. Download your work before leaving or refreshing.
+
+## Use your theme
+
+1. Choose a theme and select **Light** or **Dark**. Edit as much or as little as you need.
+2. Leave **Only light / Only dark** selected for that appearance, or choose **Light + dark** to include both.
+3. Select **Download package**. The configuration's copy button is under **Configuration & installation**.
+
+Unzip the package into your Streamlit project's root:
+
+```text
+your-app/
+├── .streamlit/config.toml
+├── static/                  # Only the referenced font files
+├── licenses/                # Font licenses and notices
+├── LICENSE
+├── README.md                # Installation steps
+└── your_app.py
+```
+
+Back up an existing config before replacing it. Keep the package's folders together, then run:
 
 ```bash
-# Copy theme files to your Streamlit project
-cp -r .streamlit/ /path/to/your/project/
-cp -r static/ /path/to/your/project/
+streamlit run your_app.py
 ```
 
-**That's it!** All fonts are included, no downloads needed. Just restart your Streamlit app and enjoy your beautiful new theme! ✨
+Restart Streamlit after configuration/font changes. For paired output, open your app's top-right **⋮ menu** and choose **Light** or **Dark**. The `app/static/…` URLs in the config map to the package's `static/` directory; you do not need to clone this repository to use an exported theme.
 
-## 💡 How It Works
+Tested target: **Streamlit 1.66.1 / Python 3.13.12**. This is the verified runtime, not a promise of compatibility with every Streamlit version. Missing assets or notices block broken packages; contrast concerns are advisory.
 
-Each theme uses Streamlit's new theming system with:
+## Original themes and standalone demos
 
-- `.streamlit/config.toml` - Theme configuration
-- `static/` - Custom font files
-- **One simple file** that transforms everything!
+Looking for the original collection? [Browse the configurations, fonts and standalone demos](themes/README.md). That page also links to the exact pre-Studio repository snapshot. The original source, configurations, font binaries and notices are preserved; their folders now live under `themes/`.
 
-## 📖 Font Path Explanation
+## Development
 
-**Important:** Streamlit maps `app/static/` in config.toml to your project's `static/` folder. Always use `app/static/FontName.ttf` in your config even though fonts live in `static/FontName.ttf`.
+```bash
+python -m pip install -r studio/requirements-dev.txt
+python scripts/audit_baseline.py
+python -m pytest -q
+```
 
-## 📝 Attribution & Licensing
+The suite covers the original demos, all-ten export/package integrity, native sample installs, shared vs per-mode settings, session isolation, reset and protected preset switching. See [Studio development details](studio/README.md) for the sample app and preview limitations.
 
-### Streamlit Demo Code
+[Report an issue](https://github.com/jmedia65/awesome-streamlit-themes/issues) with the tested version, preset and steps to reproduce. Please omit secrets and private data.
 
-The Python demo applications are adapted from [Streamlit's official documentation examples](https://github.com/streamlit/docs), specifically the [Anthropic-inspired theming example](https://github.com/streamlit/docs/tree/main/python/concept-source/theming-overview-anthropic-light-inspried). These examples are used under the Apache 2.0 License to demonstrate how different themes transform the same interface.
+## Credits and licenses
 
-### Google Fonts
+Built on [Streamlit's theming system](https://docs.streamlit.io/develop/concepts/configuration/theming), inspired by [Thiago Teixeira's introduction](https://x.com/ThiagoTDotCom/status/1934679204320432283). Original demo applications are adapted from Streamlit's Anthropic-inspired example and retain Apache 2.0 attribution. Bundled Google Fonts retain their SIL Open Font Licenses.
 
-All fonts used in these themes are from [Google Fonts](https://fonts.google.com/) and are licensed under the [SIL Open Font License (OFL)](https://openfontlicense.org/). Individual font license files are included in each theme's static folder.
-
-### Theme Configurations
-
-The theme configurations (`.streamlit/config.toml` files) in this repository are released under the MIT License - use them however you want!
-
-## ⚠️ Disclaimer
-
-This project is provided "as is" without warranty of any kind. The themes are for educational and development purposes. Users are responsible for ensuring proper licensing and attribution when using fonts and code in their projects.
-
-## 📄 License
-
-MIT License - See [LICENSE](LICENSE) file for details.
-
-## ⭐ Show Your Support
-
-If these themes saved you hours of design work, give us a star! It helps other developers find these resources.
-
----
-
-**Built with ❤️ for the Streamlit community**  
-_Standing on the shoulders of the amazing Streamlit team_ 🚀
+See [LICENSE](LICENSE), [third-party notices](THIRD_PARTY_NOTICES.md) and [font notices](licenses/FONT_NOTICES.md). Code/configuration licensing does not replace the fonts' licenses.

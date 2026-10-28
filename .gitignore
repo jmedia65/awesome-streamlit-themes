@@ -149,6 +149,7 @@ celerybeat.pid
 .envrc
 .venv
 .venv/
+.venv-*/
 .local/
 studio/static/
 env/

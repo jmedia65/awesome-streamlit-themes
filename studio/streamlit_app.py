@@ -1,14 +1,12 @@
 """Per-session theme design, isolated preview, and portable exports."""
 
-from copy import deepcopy
-
 import streamlit as st
 
 from studio.catalog import PRESETS, get_preset, load_theme
 from studio.export import export_package
 from studio.preview import render_preview
-from studio.theme import (CODE_FONT_CHOICES, EDITABLE_PRESETS, FONT_CHOICES, RADIUS_OPTIONS,
-                          ThemeError, contrast_advisories, draft_changes, draft_theme, preset_draft)
+from studio.theme import (RADIUS_OPTIONS, ThemeError, contrast_advisories, draft_changes,
+                          draft_theme, font_choices, preset_draft)
 
 st.set_page_config(page_title="Theme Studio · Awesome Streamlit Themes", page_icon="◈", layout="wide")
 
@@ -130,7 +128,6 @@ selected = get_preset(st.session_state.preset)
 draft = st.session_state.draft
 mode = draft["appearance"]
 variant = draft["variants"][mode]
-editable = selected.slug in EDITABLE_PRESETS
 changes = draft_changes(selected.slug, draft)
 
 with st.container(horizontal=True, vertical_alignment="center", horizontal_alignment="distribute"):
@@ -156,8 +153,11 @@ if st.session_state.workspace == "All 10 themes":
         columns = st.columns(3, gap="medium")
         for column, preset in zip(columns, PRESETS[offset:offset + 3]):
             with column, st.container(border=True):
-                st.image(str(preset.gallery_image), width="stretch", output_format="PNG",
-                         alt=f"{preset.name} Dashboard in the Studio’s approximate preview")
+                if preset.gallery_image.is_file():
+                    st.image(str(preset.gallery_image), width="stretch", output_format="PNG",
+                             alt=f"{preset.name} Dashboard in the Studio’s approximate preview")
+                else:
+                    st.caption("Preview image unavailable. You can still use this theme.")
                 st.markdown(f"### {preset.name}")
                 st.caption(preset.description)
                 st.button("Selected · Open studio" if preset == selected else "Use this theme →",
@@ -173,42 +173,36 @@ else:
                          format_func=lambda slug: get_preset(slug).name, key="preset_picker",
                          on_change=lambda: choose_preset(st.session_state.preset_picker))
             st.caption(selected.description)
-            st.caption(f"{len(changes)} changed settings · session only" if changes else "Preset defaults · ready to try")
-            if editable:
-                st.radio("Include in your download:", ["single", "paired"], key="export_scope", horizontal=True,
-                         format_func=lambda value: f"Only {mode}" if value == "single" else "Light + dark",
-                         on_change=store_choice, args=("export_scope", "output"))
-                st.segmented_control("Edit appearance", ["light", "dark"], key="edit_appearance", required=True,
-                                     format_func=str.capitalize, on_change=store_choice, args=("edit_appearance", "appearance"))
-                st.caption("Light and dark have separate colors.")
+            st.caption(f"{len(changes)} setting{'s' if len(changes) != 1 else ''} changed · session only" if changes else "Preset defaults · ready to try")
+            st.radio("Include in your download:", ["single", "paired"], key="export_scope", horizontal=True,
+                     format_func=lambda value: f"Only {mode}" if value == "single" else "Light + dark",
+                     on_change=store_choice, args=("export_scope", "output"))
+            st.segmented_control("Edit appearance", ["light", "dark"], key="edit_appearance", required=True,
+                                 format_func=str.capitalize, on_change=store_choice, args=("edit_appearance", "appearance"))
+            st.caption("Light and dark have separate colors.")
             st.markdown("**Colors**")
             color_controls([("accent", "Accent"), ("background", "Canvas")])
-            if editable:
-                with st.expander("Typography & shape"):
-                    st.caption("Fonts apply to both appearances and the sidebar.")
-                    for key, label, options in (("heading_font", "Heading font", FONT_CHOICES),
-                                                ("body_font", "Body font", FONT_CHOICES),
-                                                ("code_font", "Code font", CODE_FONT_CHOICES)):
-                        st.selectbox(label, list(options), key=key, format_func=options.get,
-                                     on_change=store_font, args=(key,))
-                    st.select_slider("Corner radius", options=RADIUS_OPTIONS, key="radius", on_change=store_control, args=("radius", mode))
-                    st.select_slider("Button radius", options=RADIUS_OPTIONS, key="button_radius", on_change=store_control, args=("button_radius", mode))
-                with st.expander("Sidebar"):
-                    st.checkbox("Customize sidebar colors", key="sidebar_custom", on_change=store_control, args=("sidebar_custom", mode))
-                    st.caption("Custom colors affect this appearance only. Turn off to match the main canvas, surface and text exactly; your custom values are kept.")
-                    color_controls([("sidebar_background", "Sidebar canvas"), ("sidebar_surface", "Sidebar surface"),
-                                    ("sidebar_text", "Sidebar text")], disabled=not variant["sidebar_custom"])
-                    st.caption("Accent, links, borders and fonts inherit the main appearance.")
-                with st.expander("Advanced"):
-                    color_controls([("text", "Text"), ("link", "Links"), ("border", "Borders"),
-                                    ("surface", "Surface"), ("code_background", "Code canvas")])
-                    st.checkbox("Show widget borders", key="widget_border", on_change=store_control, args=("widget_border", mode))
-                    st.checkbox("Show sidebar divider · both appearances", key="sidebar_border", on_change=store_choice,
-                                args=("sidebar_border", "showSidebarBorder"))
-            else:
-                st.text_input("Body font", draft["fonts"]["font"], disabled=True)
+            with st.expander("Typography & shape"):
+                st.caption("Fonts apply to both appearances and the sidebar.")
+                for key, label, options in (("heading_font", "Heading font", font_choices(selected.slug, "headingFont")),
+                                            ("body_font", "Body font", font_choices(selected.slug, "font")),
+                                            ("code_font", "Code font", font_choices(selected.slug, "codeFont"))):
+                    st.selectbox(label, list(options), key=key, format_func=options.get,
+                                 on_change=store_font, args=(key,))
                 st.select_slider("Corner radius", options=RADIUS_OPTIONS, key="radius", on_change=store_control, args=("radius", mode))
-                st.caption("This preset has a concept preview. Full editing and export currently support Healthcare, Financial and Dark Mode Developer.")
+                st.select_slider("Button radius", options=RADIUS_OPTIONS, key="button_radius", on_change=store_control, args=("button_radius", mode))
+            with st.expander("Sidebar"):
+                st.checkbox("Customize sidebar colors", key="sidebar_custom", on_change=store_control, args=("sidebar_custom", mode))
+                st.caption("Custom colors affect this appearance only. Turn off to match the main canvas, surface and text exactly; your custom values are kept.")
+                color_controls([("sidebar_background", "Sidebar canvas"), ("sidebar_surface", "Sidebar surface"),
+                                ("sidebar_text", "Sidebar text")], disabled=not variant["sidebar_custom"])
+                st.caption("Accent, links, borders and fonts inherit the main appearance.")
+            with st.expander("Advanced"):
+                color_controls([("text", "Text"), ("link", "Links"), ("border", "Borders"),
+                                ("surface", "Surface"), ("code_background", "Code canvas")])
+                st.checkbox("Show widget borders", key="widget_border", on_change=store_control, args=("widget_border", mode))
+                st.checkbox("Show sidebar divider · both appearances", key="sidebar_border", on_change=store_choice,
+                            args=("sidebar_border", "showSidebarBorder"))
             st.button("Reset to preset", on_click=reset_controls, type="tertiary", width="stretch")
             if changes:
                 with st.expander("Changes from preset"):
@@ -217,9 +211,8 @@ else:
     working_theme = None
     export_data = None
     try:
-        if editable:
-            working_theme = draft_theme(draft)
-            export_data = export_package(working_theme)
+        working_theme = draft_theme(draft)
+        export_data = export_package(working_theme)
     except (ThemeError, OSError) as error:
         st.error(str(error) if isinstance(error, ThemeError) else "A required asset is unavailable. Export was stopped.")
     with canvas:
@@ -235,21 +228,15 @@ else:
             st.caption("Showing the starting palette for this appearance. Your edits and download are unchanged.")
         with st.container(border=True, key="preview_frame"):
             try:
-                if editable:
-                    preview_draft = preset_draft(selected.slug) if source == "Preset defaults" else draft
-                    preview_theme = draft_theme(preview_draft, appearance=mode, output="single")
-                else:
-                    preview_theme = load_theme(selected.slug)
-                    if source == "Current edits":
-                        preview_theme.update({key: deepcopy(value) for key, value in variant.items()
-                                              if key in {"primaryColor", "backgroundColor", "baseRadius"}})
+                preview_draft = preset_draft(selected.slug) if source == "Preset defaults" else draft
+                preview_theme = draft_theme(preview_draft, appearance=mode, output="single")
                 st.iframe(render_preview(selected.slug, preview_theme["primaryColor"], preview_theme["backgroundColor"],
                                          preview_theme["baseRadius"], view, preview_theme),
                           height="content", alt=f"Approximate {selected.name} {mode} {view.lower()} preview")
             except (ThemeError, OSError) as error:
                 st.error(str(error) if isinstance(error, ThemeError) else "A preview font is unavailable. Restore the asset and try again.")
         st.caption("HTML/CSS approximation of built-in Streamlit elements. Native widgets, charts, sizing and responsive behavior may differ.")
-        if editable and working_theme:
+        if working_theme:
             modes = ("light", "dark") if draft["output"] == "paired" else (mode,)
             for appearance in modes:
                 for advisory in contrast_advisories(draft_theme(draft, appearance=appearance, output="single")):

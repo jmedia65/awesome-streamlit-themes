@@ -35,10 +35,10 @@ git clone https://github.com/jmedia65/awesome-streamlit-themes.git
 cd awesome-streamlit-themes
 
 # Install dependencies
-pip install -r requirements.txt
+pip install -r themes/requirements-legacy.txt
 
 # Navigate to cyberpunk theme and see it in action
-cd cyberpunk
+cd themes/cyberpunk
 streamlit run streamlit_app.py
 ```
 

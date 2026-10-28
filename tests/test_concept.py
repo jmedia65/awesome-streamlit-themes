@@ -61,7 +61,11 @@ def test_dropdown_switch_synchronizes_frontend_then_radius_keeps_palette(preset)
     assert app.button(key="discard_switch")
     app.button(key="discard_switch").click().run()
     source = load_theme(preset.slug)
-    accent = "#9333ea" if preset.slug == "dark-mode" else source["primaryColor"]
+    studio_accents = {
+        "dark-mode": "#9333ea", "saas-startup": "#7c3aed", "tailwind": "#2563eb",
+        "cyberpunk": "#d6006b", "toddler": "#c83e4b",
+    }
+    accent = studio_accents.get(preset.slug, source["primaryColor"])
     assert not app.exception
     assert app.color_picker(key="accent").value == accent
     assert app.color_picker(key="background").value == source["backgroundColor"]

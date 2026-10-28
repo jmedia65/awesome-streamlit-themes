@@ -36,10 +36,10 @@ git clone https://github.com/jmedia65/awesome-streamlit-themes.git
 cd awesome-streamlit-themes
 
 # Install dependencies
-pip install -r requirements.txt
+pip install -r themes/requirements-legacy.txt
 
 # Navigate to dark-mode theme and see it in action
-cd dark-mode
+cd themes/dark-mode
 streamlit run streamlit_app.py
 ```
 

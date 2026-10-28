@@ -5,6 +5,7 @@ from pathlib import Path
 import tomllib
 
 ROOT = Path(__file__).resolve().parents[1]
+THEMES = ROOT / "themes"
 
 
 @dataclass(frozen=True)
@@ -17,7 +18,7 @@ class Preset:
 
     @property
     def directory(self) -> Path:
-        return ROOT / self.slug
+        return THEMES / self.slug
 
     @property
     def image(self) -> Path:

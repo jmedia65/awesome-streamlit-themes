@@ -36,10 +36,10 @@ git clone https://github.com/jmedia65/awesome-streamlit-themes.git
 cd awesome-streamlit-themes
 
 # Install dependencies
-pip install -r requirements.txt
+pip install -r themes/requirements-legacy.txt
 
 # Navigate to tailwind theme and see it in action
-cd tailwind
+cd themes/tailwind
 streamlit run streamlit_app.py
 ```
 

@@ -70,10 +70,10 @@ def test_font_path_cannot_reference_unregistered_files():
         export_package(theme)
 
 
-@pytest.mark.parametrize("missing", ["healthcare/static/IBMPlexMono-Regular.ttf", "licenses/fonts/OFL-ibmplexmono.txt"])
+@pytest.mark.parametrize("missing", ["themes/healthcare/static/IBMPlexMono-Regular.ttf", "licenses/fonts/OFL-ibmplexmono.txt"])
 def test_missing_asset_or_license_prevents_package(tmp_path, missing):
     # Supply only expected roots, then remove a required dependency.
-    for name in ("healthcare", "editorial", "licenses"):
+    for name in ("themes/healthcare", "themes/editorial", "licenses"):
         shutil.copytree(ROOT / name, tmp_path / name)
     shutil.copyfile(ROOT / "LICENSE", tmp_path / "LICENSE")
     (tmp_path / missing).unlink()

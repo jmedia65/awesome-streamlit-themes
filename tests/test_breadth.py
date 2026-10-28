@@ -34,13 +34,20 @@ def segment(app, key):
 
 
 @pytest.mark.parametrize("slug", EDITABLE_PRESETS)
-def test_three_defaults_preserve_original_identity_and_have_distinct_counterparts(slug):
+def test_ten_defaults_preserve_theme_identity_and_have_distinct_counterparts(slug):
     draft = preset_draft(slug)
     theme = draft_theme(draft)
     original = load_theme(slug)
+    studio_updates = {
+        "dark-mode": {"primaryColor": "#9333ea"},
+        "saas-startup": {"primaryColor": "#7c3aed"},
+        "tailwind": {"primaryColor": "#2563eb"},
+        "cyberpunk": {"primaryColor": "#d6006b"},
+        "toddler": {"primaryColor": "#c83e4b", "linkColor": "#b02a60"},
+    }
     for key in ("primaryColor", "backgroundColor", "secondaryBackgroundColor", "textColor",
                 "font", "headingFont", "codeFont", "baseRadius", "showWidgetBorder", "showSidebarBorder"):
-        expected = "#9333ea" if slug == "dark-mode" and key == "primaryColor" else original[key]
+        expected = studio_updates.get(slug, {}).get(key, original[key])
         assert theme[key] == expected
     assert not draft_changes(slug, draft)
     assert theme["base"] == get_preset(slug).appearance
@@ -228,7 +235,6 @@ def test_color_and_mode_events_in_one_rerun_keep_the_color_in_its_rendered_mode(
 def test_representative_packages_install_in_separate_native_processes(tmp_path, slug, paired):
     draft = preset_draft(slug)
     draft["output"] = "paired" if paired else "single"
-    draft["fonts"]["headingFont"] = "Lora"
     _, package = export_package(draft_theme(draft))
     with zipfile.ZipFile(BytesIO(package)) as archive:
         archive.extractall(tmp_path)
@@ -238,7 +244,9 @@ from streamlit import config
 import tomllib
 app=AppTest.from_file('sample_app.py',default_timeout=30).run()
 assert not app.exception, [e.message for e in app.exception]
-assert config.get_option('theme.headingFont')=='Lora'
+expected=tomllib.load(open('.streamlit/config.toml','rb'))['theme']
+for field in ('font','headingFont','codeFont'):
+    assert config.get_option('theme.'+field)==expected[field]
 assert config.get_option('server.enableStaticServing') is True
 theme=tomllib.load(open('.streamlit/config.toml','rb'))['theme']
 for mode in ('light','dark'):

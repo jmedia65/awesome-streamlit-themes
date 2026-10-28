@@ -10,11 +10,39 @@ from studio.catalog import PRESETS, ROOT, get_preset, load_theme
 RADIUS_OPTIONS = ("0.125rem", "0.2rem", "0.25rem", "0.375rem", "0.5rem", "0.75rem", "1rem")
 FONT_CHOICES = {"IBMPlexSans": "IBM Plex Sans", "Inter": "Inter", "Lora": "Lora"}
 CODE_FONT_CHOICES = {"IBMPlexMono": "IBM Plex Mono", "SourceCodePro": "Source Code Pro", "JetBrainsMono": "JetBrains Mono"}
-EDITABLE_PRESETS = ("healthcare", "financial", "dark-mode")
+EDITABLE_PRESETS = tuple(p.slug for p in PRESETS)
 COLORS = {"primaryColor", "backgroundColor", "secondaryBackgroundColor", "textColor", "linkColor", "borderColor", "codeBackgroundColor"}
 FONTS = {"font", "headingFont", "codeFont"}
 APPEARANCE_FIELDS = COLORS | FONTS | {"baseRadius", "buttonRadius", "showWidgetBorder", "sidebar"}
 SHARED_FIELDS = {"base", "fontFaces", "showSidebarBorder"}
+
+
+# Finite names from the bundled originals, never arbitrary CSS font strings.
+FONT_NAMES = {
+    **FONT_CHOICES, **CODE_FONT_CHOICES, "PlayfairDisplay": "Playfair Display",
+    "DMSans": "DM Sans", "FiraCode": "Fira Code", "Roboto": "Roboto",
+    "RobotoMono": "Roboto Mono", "Orbitron": "Orbitron", "ComicNeue": "Comic Neue", "Fredoka": "Fredoka",
+}
+STUDIO_COLOR_UPDATES = {
+    "dark-mode": {"primaryColor": "#9333ea"},
+    "saas-startup": {"primaryColor": "#7c3aed"},
+    "tailwind": {"primaryColor": "#2563eb"},
+    "cyberpunk": {"primaryColor": "#d6006b"},
+    "toddler": {"primaryColor": "#c83e4b", "linkColor": "#b02a60"},
+}
+
+
+@lru_cache(maxsize=3)
+def _role_fonts(field):
+    fields = {"codeFont"} if field == "codeFont" else {"font", "headingFont"}
+    return frozenset(load_theme(p.slug)[key] for p in PRESETS for key in fields)
+
+
+def font_choices(slug, field):
+    """Keep the theme's own font first, plus the three established alternatives."""
+    original = load_theme(slug)[field]
+    alternatives = CODE_FONT_CHOICES if field == "codeFont" else FONT_CHOICES
+    return {original: FONT_NAMES[original], **alternatives}
 
 
 class ThemeError(ValueError):
@@ -48,7 +76,7 @@ def font_asset(face, root=ROOT):
         _, slug, relative = _font_inventory()[_face_key(face)]
     except (KeyError, TypeError):
         raise ThemeError("Unsupported font declaration. Choose a bundled font.") from None
-    path = root / slug / relative
+    path = root / "themes" / slug / relative
     if not path.is_file():
         raise ThemeError(f"Missing font asset: {path.name}. Restore the file before exporting.")
     return path
@@ -181,6 +209,35 @@ COUNTERPARTS = {
         "secondaryBackgroundColor": "#f0edf5", "textColor": "#242033",
         "linkColor": "#6b21a8", "borderColor": "#d3cbdc", "codeBackgroundColor": "#ece8f2",
         "sidebar": {"backgroundColor": "#f2eef8", "secondaryBackgroundColor": "#e7e0f1", "textColor": "#242033"}},
+
+    "editorial": {
+        "primaryColor": "#bc2544", "backgroundColor": "#181516", "secondaryBackgroundColor": "#272123",
+        "textColor": "#f2ece8", "linkColor": "#8fc1ff", "borderColor": "#514447", "codeBackgroundColor": "#231e20",
+        "sidebar": {"backgroundColor": "#221b1e", "secondaryBackgroundColor": "#372a2f", "textColor": "#f2ece8"}},
+    "saas-startup": {
+        "primaryColor": "#7c3aed", "backgroundColor": "#100e18", "secondaryBackgroundColor": "#211a2f",
+        "textColor": "#f1edf8", "linkColor": "#c4b5fd", "borderColor": "#453659", "codeBackgroundColor": "#1c1729",
+        "sidebar": {"backgroundColor": "#191324", "secondaryBackgroundColor": "#2a203b", "textColor": "#f1edf8"}},
+    "bootstrap": {
+        "primaryColor": "#0d6efd", "backgroundColor": "#111820", "secondaryBackgroundColor": "#1c2733",
+        "textColor": "#eef3f8", "linkColor": "#8cbeff", "borderColor": "#3c4c5d", "codeBackgroundColor": "#192430",
+        "sidebar": {"backgroundColor": "#17212c", "secondaryBackgroundColor": "#263545", "textColor": "#eef3f8"}},
+    "tailwind": {
+        "primaryColor": "#2563eb", "backgroundColor": "#0b1220", "secondaryBackgroundColor": "#162238",
+        "textColor": "#e2e8f0", "linkColor": "#93c5fd", "borderColor": "#334155", "codeBackgroundColor": "#152238",
+        "sidebar": {"backgroundColor": "#101d30", "secondaryBackgroundColor": "#223149", "textColor": "#e2e8f0"}},
+    "material-design": {
+        "primaryColor": "#1976d2", "backgroundColor": "#10171c", "secondaryBackgroundColor": "#1b272f",
+        "textColor": "#ecf2f5", "linkColor": "#8bc6ff", "borderColor": "#40515d", "codeBackgroundColor": "#1a2831",
+        "sidebar": {"backgroundColor": "#17222a", "secondaryBackgroundColor": "#293947", "textColor": "#ecf2f5"}},
+    "cyberpunk": {
+        "primaryColor": "#d6006b", "backgroundColor": "#fff8fc", "secondaryBackgroundColor": "#f0f6fa",
+        "textColor": "#12303b", "linkColor": "#00717a", "borderColor": "#b95117", "codeBackgroundColor": "#eaf0f9",
+        "sidebar": {"backgroundColor": "#e9f3f6", "secondaryBackgroundColor": "#dce8f0", "textColor": "#12303b"}},
+    "toddler": {
+        "primaryColor": "#c83e4b", "backgroundColor": "#17212c", "secondaryBackgroundColor": "#263345",
+        "textColor": "#fff1d7", "linkColor": "#ffc5d5", "borderColor": "#627d99", "codeBackgroundColor": "#243748",
+        "sidebar": {"backgroundColor": "#202c39", "secondaryBackgroundColor": "#344559", "textColor": "#fff1d7"}},
 }
 
 
@@ -190,9 +247,8 @@ def preset_draft(slug):
     mode = get_preset(slug).appearance
     variant = {key: deepcopy(value) for key, value in source.items()
                if key in COLORS | {"baseRadius", "showWidgetBorder", "sidebar"}}
-    if slug == "dark-mode":
-        # Refresh the Studio default without modifying the historical demo.
-        variant["primaryColor"] = "#9333ea"
+    # Refresh small contrast issues in Studio defaults; historical files stay exact.
+    variant.update(STUDIO_COLOR_UPDATES.get(slug, {}))
     variant["buttonRadius"] = source["baseRadius"]
     variant["sidebar"].setdefault("textColor", source["textColor"])
     variant["sidebar_custom"] = True
@@ -211,8 +267,8 @@ def draft_theme(draft, *, appearance=None, output=None):
     if output not in {"single", "paired"} or appearance not in {"light", "dark"}:
         raise ThemeError("Choose a single appearance or a light/dark pair.")
     fonts = draft["fonts"]
-    if (set(fonts) != FONTS or fonts["font"] not in FONT_CHOICES
-            or fonts["headingFont"] not in FONT_CHOICES or fonts["codeFont"] not in CODE_FONT_CHOICES):
+    if (set(fonts) != FONTS or fonts["font"] not in _role_fonts("font")
+            or fonts["headingFont"] not in _role_fonts("headingFont") or fonts["codeFont"] not in _role_fonts("codeFont")):
         raise ThemeError("Choose a supported bundled body, heading and code font.")
     families = set(fonts.values())
     theme = {**fonts, "showSidebarBorder": draft["showSidebarBorder"],
